@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학부모·학생 인터뷰 모집 | Team 310</title>
+  <meta name="description" content="AI·SW마에스트로 17기 Team 310이 자녀 입시·진로 고민을 가진 학부모님과 학생의 이야기를 듣고 있습니다. 30분 인터뷰, 문화상품권 제공.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://team310.kr">
+  <meta property="og:title" content="학부모·학생 인터뷰 모집 | Team 310">
+  <meta property="og:description" content="입시 정보는 많은데 우리 아이에게 맞는 전략이 막막한 분들의 이야기를 듣고 싶습니다.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-dark: #102035;
+      --cream: #fffdf9;
+      --surface: #f7f8f9;
+      --orange: #f97316;
+      --orange-dark: #d85f0b;
+      --sage: #4a7c59;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --shadow: 0 8px 24px rgba(16, 32, 53, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      letter-spacing: 0;
+      word-break: keep-all;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: "PretendardVariable", "Noto Sans KR", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      color: var(--white);
+    }
+
+    .nav {
+      width: min(1140px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .brand-mark,
+    .avatar,
+    .mentor-mark {
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88svh;
+      display: grid;
+      align-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(16, 32, 53, 0.96) 0%, rgba(30, 58, 95, 0.86) 46%, rgba(16, 32, 53, 0.72) 100%),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=82") center / cover no-repeat;
+      padding: 112px 20px 52px;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 88px;
+      background: linear-gradient(to bottom, rgba(255, 253, 249, 0), var(--cream));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(880px, 100%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .eyebrow.dark {
+      border-color: rgba(30, 58, 95, 0.14);
+      background: rgba(30, 58, 95, 0.06);
+      color: var(--navy);
+    }
+
+    .eyebrow.orange {
+      border-color: rgba(249, 115, 22, 0.22);
+      background: rgba(249, 115, 22, 0.08);
+      color: #a64608;
+    }
+
+    .hero h1 {
+      margin: 20px auto 18px;
+      max-width: 780px;
+      font-size: 32px;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero .tagline {
+      color: #fed7aa;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 16px;
+    }
+
+    .quote-line {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.72);
+      font-style: normal;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 28px 0 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      min-width: 190px;
+      padding: 0 26px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 800;
+      line-height: 1.2;
+      transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(249, 115, 22, 0.28);
+    }
+
+    .button.primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .button.secondary:hover {
+      background: rgba(255, 255, 255, 0.17);
+    }
+
+    .button.ghost {
+      color: var(--navy);
+      border-color: rgba(30, 58, 95, 0.22);
+      background: var(--white);
+    }
+
+    .button.ghost:hover {
+      border-color: var(--navy);
+      background: #f6f8fb;
+    }
+
+    .button.dark {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .button.dark:hover {
+      background: var(--navy-dark);
+    }
+
+    .button.full {
+      width: 100%;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2.2;
+      flex: 0 0 auto;
+    }
+
+    .incentive {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 36px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .trust-item .icon {
+      width: 16px;
+      height: 16px;
+      color: #86efac;
+    }
+
+    section {
+      padding: 72px 20px;
+    }
+
+    .section-alt {
+      background: var(--surface);
+    }
+
+    .section-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .container {
+      width: min(1140px, 100%);
+      margin: 0 auto;
+    }
+
+    .narrow {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      margin: 12px 0 12px;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .section-dark .section-head h2 {
+      color: var(--white);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section-dark .section-head p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.two {
+      grid-template-columns: 1fr;
+    }
+
+    .grid.three {
+      grid-template-columns: 1fr;
+    }
+
+    .grid.four {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    .card ul {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .card li::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 2px;
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--sage);
+    }
+
+    .pain-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pain-icon,
+    .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .pain-card blockquote,
+    .quote-box {
+      margin: 0;
+      padding: 13px 14px;
+      border-left: 3px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      background: rgba(249, 115, 22, 0.06);
+      color: #6f3b15;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .mission-band {
+      margin-top: 26px;
+      padding: 28px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .mission-band p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .mission-band strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--white);
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .product-strip {
+      display: grid;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(30, 58, 95, 0.14);
+      background: rgba(30, 58, 95, 0.04);
+    }
+
+    .product-strip strong {
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .product-strip p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .team-intro {
+      margin-bottom: 22px;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid rgba(30, 58, 95, 0.14);
+      background: var(--white);
+    }
+
+    .team-intro p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .team-intro strong {
+      color: var(--navy);
+    }
+
+    .member-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .member-top,
+    .mentor-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .avatar,
+    .mentor-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 8px;
+      background: var(--navy);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .avatar.sage,
+    .mentor-mark.sage {
+      background: var(--sage);
+    }
+
+    .avatar.orange,
+    .mentor-mark.orange {
+      background: var(--orange);
+    }
+
+    .role {
+      margin: 2px 0 0;
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .small-label {
+      display: block;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .common-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .check-item .icon {
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      color: var(--sage);
+    }
+
+    .step-card {
+      position: relative;
+    }
+
+    .step-card h3 {
+      margin-top: 16px;
+    }
+
+    .do-dont {
+      margin-top: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .do-dont .card {
+      box-shadow: none;
+    }
+
+    .mentor-card {
+      box-shadow: none;
+    }
+
+    .logo-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .org-chip {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--navy);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 22px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: #fed7aa;
+      font-size: 30px;
+      line-height: 1.1;
+      font-weight: 850;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .support-grid {
+      margin-top: 26px;
+    }
+
+    .support-grid .card {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: none;
+    }
+
+    .support-grid .card h3,
+    .support-grid .card p {
+      color: var(--white);
+    }
+
+    .support-grid .card p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .apply-panel {
+      display: grid;
+      gap: 16px;
+    }
+
+    .apply-facts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fact {
+      padding: 16px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .fact .icon {
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .fact span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .form-slot {
+      padding: 28px;
+      border: 2px dashed rgba(249, 115, 22, 0.26);
+      border-radius: 8px;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .form-slot h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.45;
+    }
+
+    .form-slot p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .privacy-note {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px;
+      border-radius: 8px;
+      background: rgba(74, 124, 89, 0.1);
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .privacy-note .icon {
+      color: var(--sage);
+      margin-top: 4px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .faq-question:hover {
+      background: #f9fafb;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-question .icon {
+      transform: rotate(45deg);
+    }
+
+    .closing-cta {
+      background: linear-gradient(135deg, var(--orange), #fb923c);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .closing-cta h2 {
+      margin: 0 auto 12px;
+      max-width: 680px;
+      font-size: 26px;
+      line-height: 1.35;
+    }
+
+    .closing-cta p {
+      max-width: 640px;
+      margin: 0 auto 24px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    footer {
+      padding: 42px 20px;
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    footer h2,
+    footer h3,
+    footer p {
+      margin-top: 0;
+    }
+
+    footer h2 {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    footer h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .sticky-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      transform: translateY(120%);
+      transition: transform 200ms ease;
+      padding: 10px 14px;
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 -10px 28px rgba(16, 32, 53, 0.22);
+    }
+
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-inner {
+      width: min(640px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sticky-text {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .sticky-text span {
+      display: block;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .sticky-close {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    @media (min-width: 760px) {
+      body {
+        font-size: 17px;
+      }
+
+      .desktop-only {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 118px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero .tagline {
+        font-size: 22px;
+      }
+
+      .hero-copy {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 96px 60px;
+      }
+
+      .section-head {
+        margin-bottom: 42px;
+      }
+
+      .section-head h2 {
+        font-size: 36px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid.four {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .do-dont {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-strip {
+        grid-template-columns: 0.62fr 1.38fr;
+      }
+
+      .logo-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .stat strong {
+        font-size: 38px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 759px) {
+      .nav {
+        width: min(100% - 32px, 640px);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 90svh;
+      }
+
+      .actions,
+      .contact-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .trust-row {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .trust-item {
+        justify-content: center;
+      }
+
+      .apply-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .sticky-inner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .sticky-inner .button {
+        width: auto;
+        min-width: 112px;
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 14px;
+      }
+
+      .sticky-close {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" aria-label="상단 내비게이션">
+    <nav class="nav">
+      <a class="brand" href="#hero" aria-label="Team 310 홈">
+        <span class="brand-mark">310</span>
+        <span>Team 310</span>
+      </a>
+      <div class="nav-links desktop-only" aria-label="주요 섹션">
+        <a href="#problem">문제</a>
+        <a href="#team">팀</a>
+        <a href="#approach">접근 방식</a>
+        <a href="#mentor">멘토</a>
+        <a href="#apply">신청</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">
+          <i data-lucide="shield-check" class="icon" aria-hidden="true"></i>
+          AI·SW마에스트로 17기 정부 지원 프로젝트
+        </span>
+        <h1>
+          <span>학부모·학생 인터뷰 모집</span>
+          <span class="tagline">당신의 이야기가 우리를 움직입니다</span>
+        </h1>
+        <p class="hero-copy">
+          자녀 입시·진로 고민을 가진 학부모님과 학생의 진솔한 이야기를 30분간 듣고 싶습니다.
+          <span class="quote-line">"입시 정보는 넘치는데, 우리 아이에게 맞는 전략은 아무도 안 알려줘요."</span>
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#apply">
+            <i data-lucide="calendar-check" class="icon" aria-hidden="true"></i>
+            인터뷰 신청하기
+          </a>
+          <a class="button secondary" href="#team">
+            <i data-lucide="users" class="icon" aria-hidden="true"></i>
+            우리 팀은 누구인가요?
+          </a>
+          <button class="button secondary" type="button" id="shareButton">
+            <i data-lucide="share-2" class="icon" aria-hidden="true"></i>
+            공유하기
+          </button>
+        </div>
+        <p class="incentive">문화상품권 제공 | 대면·비대면 자유 | 5월 중 진행</p>
+        <div class="trust-row" aria-label="신뢰 지표">
+          <span class="trust-item"><i data-lucide="check" class="icon" aria-hidden="true"></i>정부 공식 프로그램</span>
+          <span class="trust-item"><i data-lucide="check" class="icon" aria-hidden="true"></i>3월~5월 100+ 인터뷰</span>
+          <span class="trust-item"><i data-lucide="check" class="icon" aria-hidden="true"></i>30~40분 편한 대화</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="container">
+        <div class="section-head narrow">
+          <span class="eyebrow dark">우리가 보는 문제</span>
+          <h2>학부모님이 원하는 것은 더 많은 정보가 아닙니다</h2>
+          <p>정보는 이미 넘칩니다. 막히는 지점은 우리 아이의 누적 기록을 어떻게 읽고, 지금 무엇을 우선해야 하는지입니다.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="file-search" class="icon" aria-hidden="true"></i></span>
+            <h3>생활기록부·성적 기반 개인화 해석 부족</h3>
+            <p>중학교 3년의 기록은 쌓였지만, 그것이 어떤 선택으로 이어져야 하는지 판단하기 어렵습니다.</p>
+            <blockquote>"우리 아이 기록 기준으로 뭘 해야 하는지 모르겠어요."</blockquote>
+          </article>
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="shield-alert" class="icon" aria-hidden="true"></i></span>
+            <h3>결제 직전 신뢰·개인정보 불안</h3>
+            <p>상담자 신뢰도, 생기부 업로드 부담, 가격 대비 가치가 구매 결정을 망설이게 만듭니다.</p>
+            <blockquote>"정말 믿고 맡겨도 되는지 먼저 알고 싶어요."</blockquote>
+          </article>
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="repeat-2" class="icon" aria-hidden="true"></i></span>
+            <h3>일회성 상담의 한계</h3>
+            <p>상담을 받고 실행해도 결과가 누적되지 않으면 다음 조언은 다시 처음부터 시작됩니다.</p>
+            <blockquote>"좋은 말은 들었는데, 안 되면 그 다음은 모르겠어요."</blockquote>
+          </article>
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="route" class="icon" aria-hidden="true"></i></span>
+            <h3>예비고1 준비 방향 공백</h3>
+            <p>학원은 과목을 알려주지만 학교 선택, 생기부 방향, 고1 첫 90일 계획은 비어 있습니다.</p>
+            <blockquote>"고등학교 가기 전에 뭘 준비해야 하는지 애매해요."</blockquote>
+          </article>
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="message-square-text" class="icon" aria-hidden="true"></i></span>
+            <h3>담임·진로 상담 질문 준비 부족</h3>
+            <p>학교 상담은 중요하지만 무엇을 물어봐야 할지 몰라 시간을 충분히 활용하지 못합니다.</p>
+            <blockquote>"상담 전에 질문을 정리해주는 기준이 있으면 좋겠어요."</blockquote>
+          </article>
+          <article class="card pain-card">
+            <span class="pain-icon"><i data-lucide="badge-alert" class="icon" aria-hidden="true"></i></span>
+            <h3>특목·자사 준비의 우선순위 압박</h3>
+            <p>시간 압박이 큰 세그먼트에서는 원서, 면접, 자소서 중 어디부터 손대야 할지 막막합니다.</p>
+            <blockquote>"이미 늦은 건 아닌지, 지금 제일 급한 게 뭔지 모르겠어요."</blockquote>
+          </article>
+        </div>
+
+        <div class="mission-band">
+          <p>Team 310의 미션</p>
+          <strong>누적된 개인 맥락을 읽어, 학부모와 학생이 지금 무엇을 우선해야 하는지 명확히 아는 경험을 만듭니다.</strong>
+        </div>
+
+        <div class="product-strip">
+          <strong>우리가 준비하는 서비스, 미리(MIRI)</strong>
+          <p>미래 생기부를 미리 보고 지금 해야 할 일을 아는 경험을 목표로 합니다. 이번 인터뷰는 기능을 팔기 위한 자리가 아니라, 그 경험이 정말 필요한지 확인하는 첫 단계입니다.</p>
+        </div>
+
+        <div class="actions">
+          <a class="button ghost" href="#apply">
+            <i data-lucide="arrow-down-circle" class="icon" aria-hidden="true"></i>
+            인터뷰로 함께하기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section-alt">
+      <div class="container">
+        <div class="section-head narrow">
+          <span class="eyebrow dark">팀 소개</span>
+          <h2>왜 우리가 이 문제에 집착하는가</h2>
+          <p>Team 310은 교육의 구조적 문제를 직접 보았고, 기술보다 먼저 사람의 맥락을 이해하려는 팀입니다.</p>
+        </div>
+
+        <div class="team-intro narrow">
+          <p><strong>SOMA 17기 Team 310</strong>은 정보 부족이 아니라 맥락 부족에서 비롯된 문제를 푼다고 믿습니다. "아이 성적은 좋은데, 무엇을 해야 하는지 모르겠어요." 이 말이 우리가 들은 진짜 문제였습니다.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card member-card">
+            <div class="member-top">
+              <span class="avatar">세</span>
+              <div>
+                <h3>박세종</h3>
+                <p class="role">Team Lead · 교육자형 개발자</p>
+              </div>
+            </div>
+            <ul>
+              <li>국제캠프 PM, 550명+·18개국 운영</li>
+              <li>입시 데이터 3만 건 분석</li>
+              <li>세종클래스 1인 창업, 48명 사용자 검증</li>
+            </ul>
+            <blockquote class="quote-box">"학생들이 자신의 생활기록부를 제대로 읽을 수 있다면 더 나은 선택을 할 수 있을 것 같아요."</blockquote>
+          </article>
+
+          <article class="card member-card">
+            <div class="member-top">
+              <span class="avatar sage">준</span>
+              <div>
+                <h3>박준혁</h3>
+                <p class="role">AI & Data · 인류학자적 개발자</p>
+              </div>
+            </div>
+            <ul>
+              <li>정보올림피아드 국가대표 수준 알고리즘 역량</li>
+              <li>인류학 현장 조사 경험</li>
+              <li>AI를 사회 문제 해결에 적용하는 관점</li>
+            </ul>
+            <blockquote class="quote-box">"학부모의 진짜 고민을 데이터로 읽을 수 있어야 해요."</blockquote>
+          </article>
+
+          <article class="card member-card">
+            <div class="member-top">
+              <span class="avatar orange">민</span>
+              <div>
+                <h3>박세민</h3>
+                <p class="role">PM & Backend · 사용자 검증가</p>
+              </div>
+            </div>
+            <ul>
+              <li>KOPLE 유학생 커뮤니티 2,700명 운영</li>
+              <li>LOI 확보를 통한 시장 검증 경험</li>
+              <li>사용자 인터뷰 설계 및 진행</li>
+            </ul>
+            <blockquote class="quote-box">"좋은 기술도 실제 고객의 필요를 못 풀면 의미 없어요."</blockquote>
+          </article>
+        </div>
+
+        <div class="card" style="margin-top: 16px;">
+          <span class="small-label">팀의 공통점</span>
+          <div class="common-list">
+            <span class="check-item"><i data-lucide="check-circle-2" class="icon" aria-hidden="true"></i>모두 교육이 가진 구조적 문제를 본 사람들</span>
+            <span class="check-item"><i data-lucide="check-circle-2" class="icon" aria-hidden="true"></i>기술만이 아니라 사람의 맥락으로 문제를 이해하려는 자세</span>
+            <span class="check-item"><i data-lucide="check-circle-2" class="icon" aria-hidden="true"></i>학부모·학생의 실제 피드백을 최우선시하는 개발 철학</span>
+            <span class="check-item"><i data-lucide="check-circle-2" class="icon" aria-hidden="true"></i>100+ 인터뷰로 문제를 먼저 확인하는 실행력</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container">
+        <div class="section-head narrow">
+          <span class="eyebrow dark">접근 방식</span>
+          <h2>우리는 기술보다 맥락 구조를 먼저 만듭니다</h2>
+          <p>좋은 기술도 좋은 문제 정의 없이는 의미가 없습니다. Team 310은 사용자 말에서 시작해 작은 검증을 반복합니다.</p>
+        </div>
+
+        <div class="grid four">
+          <article class="card step-card">
+            <span class="step-number">1</span>
+            <h3>사용자 말부터 듣기</h3>
+            <p>학부모와 학생이 실제로 막히는 지점을 듣고, 그 말이 개발 방향을 정하게 합니다.</p>
+          </article>
+          <article class="card step-card">
+            <span class="step-number">2</span>
+            <h3>가설을 검증하기</h3>
+            <p>"누적 맥락을 읽으면 다음 우선순위가 보인다"는 가설을 인터뷰와 피드백으로 확인합니다.</p>
+          </article>
+          <article class="card step-card">
+            <span class="step-number">3</span>
+            <h3>맥락 구조 설계하기</h3>
+            <p>AI 성능보다 먼저 무엇을 읽고, 어떻게 정리하고, 어떤 선택지로 연결할지 정의합니다.</p>
+          </article>
+          <article class="card step-card">
+            <span class="step-number">4</span>
+            <h3>작게 시작해 확장하기</h3>
+            <p>1명과 깊이 검증하고, 10명에서 패턴을 찾고, 100명 규모로 개선합니다.</p>
+          </article>
+        </div>
+
+        <div class="do-dont">
+          <article class="card">
+            <span class="small-label">하지 않을 일</span>
+            <ul>
+              <li>AI로 학생부 문장을 대신 써주는 일</li>
+              <li>합격 보장이나 성적 상승을 약속하는 일</li>
+              <li>한 번 보고 끝나는 일회성 리포트 생성</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="small-label">집중할 일</span>
+            <ul>
+              <li>누적된 맥락을 읽어내기</li>
+              <li>지금 우선할 일을 정확히 제시하기</li>
+              <li>피드백을 통해 다음 조언을 개선하기</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentor" class="section-alt">
+      <div class="container">
+        <div class="section-head narrow">
+          <span class="eyebrow dark">멘토 네트워크</span>
+          <h2>우리를 믿을 수 있는 이유</h2>
+          <p>기술, 서비스, 사업화, 투자 관점의 멘토들이 Team 310의 문제 정의와 실행을 함께 보고 있습니다.</p>
+        </div>
+
+        <div class="grid two">
+          <article class="card mentor-card">
+            <div class="mentor-top">
+              <span class="mentor-mark">조</span>
+              <div>
+                <h3>조재홍</h3>
+                <p class="role">공식 담당 멘토 · 기술·창업</p>
+              </div>
+            </div>
+            <ul>
+              <li>삼성전자 모바일·IoT 개발 20년 경력</li>
+              <li>에듀테크 스타트업 CTO, 10만 다운로드 서비스 경험</li>
+              <li>아이디어에서 실제 사용자까지의 전 과정 멘토링</li>
+            </ul>
+          </article>
+
+          <article class="card mentor-card">
+            <div class="mentor-top">
+              <span class="mentor-mark sage">고</span>
+              <div>
+                <h3>고세환</h3>
+                <p class="role">공식 담당 멘토 · 기획·비즈니스</p>
+              </div>
+            </div>
+            <ul>
+              <li>KIST 정보보안 및 DX/AX 전략 총괄</li>
+              <li>창업진흥원 평가위원, TIPS 심사위원</li>
+              <li>문제정의, MVP 검증, 기획심의 전략 멘토링</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card mentor-card" style="margin-top: 16px;">
+          <div class="mentor-top">
+            <span class="mentor-mark orange">홍</span>
+            <div>
+              <h3>홍순엽</h3>
+              <p class="role">비기술 멘토 · 모비딕벤처스 VC</p>
+            </div>
+          </div>
+          <div class="grid two">
+            <ul>
+              <li>벤처투자팀 팀장, 공학 베이스의 벤처캐피탈리스트</li>
+              <li>도전 K-스타트업, TIPS 정부 심사위원</li>
+            </ul>
+            <ul>
+              <li>기획심의 합격 전략과 투자 유치 로드맵 조언</li>
+              <li>기술과 비즈니스 모델을 함께 보는 관점 제공</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="logo-strip" aria-label="멘토 소속 기관">
+          <div class="org-chip">Samsung AI Platform Center</div>
+          <div class="org-chip">KIST · Startup Mentor</div>
+          <div class="org-chip">MOBYDICK Ventures</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="asm" class="section-dark">
+      <div class="container">
+        <div class="section-head narrow">
+          <span class="eyebrow">AI·SW마에스트로</span>
+          <h2>16년 역사의 정부 공식 프로그램에서 시작합니다</h2>
+          <p>AI·SW마에스트로 과정은 과학기술정보통신부와 정보통신기획평가원이 운영하는 AI/SW 인재 양성 사업입니다.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>17기</strong><span>Team 310 선발</span></div>
+          <div class="stat"><strong>100+</strong><span>인터뷰 기반 문제 이해</span></div>
+          <div class="stat"><strong>5개</strong><span>핵심 페인포인트 검증</span></div>
+          <div class="stat"><strong>1,200만</strong><span>팀별 개발비 지원</span></div>
+        </div>
+
+        <div class="grid three support-grid">
+          <article class="card">
+            <h3>멘토링</h3>
+            <p>기술, 비즈니스, 법률·회계, 투자 관점의 전문가 네트워크를 통해 실제 서비스화를 준비합니다.</p>
+          </article>
+          <article class="card">
+            <h3>기획심의</h3>
+            <p>2026년 5월 말 기획심의를 앞두고 학부모·학생의 실제 문제를 검증하고 있습니다.</p>
+          </article>
+          <article class="card">
+            <h3>창업 지원</h3>
+            <p>심의 통과 이후 본격 개발, 멘토링, 투자 연계, 창업 트랙 진입을 목표로 합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply" class="section-alt">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow orange">인터뷰 신청</span>
+          <h2>30분이면 충분합니다</h2>
+          <p>자연스러운 대화로 현재 고민, 자녀의 학습 환경, 사교육 경험, 가장 막혀 있는 부분을 듣습니다.</p>
+        </div>
+
+        <div class="apply-panel">
+          <div class="grid apply-facts">
+            <div class="fact">
+              <i data-lucide="clock-3" class="icon" aria-hidden="true"></i>
+              <strong>소요 시간</strong>
+              <span>30~40분</span>
+            </div>
+            <div class="fact">
+              <i data-lucide="map-pin" class="icon" aria-hidden="true"></i>
+              <strong>진행 방식</strong>
+              <span>대면 / Zoom / 전화</span>
+            </div>
+            <div class="fact">
+              <i data-lucide="gift" class="icon" aria-hidden="true"></i>
+              <strong>참여 보상</strong>
+              <span>문화상품권 제공</span>
+            </div>
+          </div>
+
+          <div class="form-slot" data-form-slot="interview-apply">
+            <h3>신청 폼 연결 전 임시 신청</h3>
+            <p>폼 URL이 준비되면 이 영역을 Tally/Google Form 임베드로 교체하면 됩니다. 지금은 아래 연락처로 바로 신청할 수 있습니다.</p>
+            <div class="contact-actions">
+              <a class="button primary" href="mailto:seminpark6637@gmail.com?subject=Team%20310%20%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EB%8C%80%EC%83%81%3A%20%ED%95%99%EB%B6%80%EB%AA%A8%20%2F%20%ED%95%99%EC%83%9D%20%2F%20%EA%B5%90%EC%9C%A1%EA%B8%B0%EA%B4%80%0A%ED%8E%B8%ED%95%9C%20%EC%8B%9C%EA%B0%84%3A%0A%ED%98%84%EC%9E%AC%20%EA%B3%A0%EB%AF%BC%3A">
+                <i data-lucide="mail" class="icon" aria-hidden="true"></i>
+                이메일로 신청
+              </a>
+              <a class="button ghost" href="tel:01031590818">
+                <i data-lucide="phone" class="icon" aria-hidden="true"></i>
+                010-3159-0818
+              </a>
+            </div>
+            <p style="margin-top: 14px; margin-bottom: 0;">대외협력 담당 박세민 · seminpark6637@gmail.com</p>
+          </div>
+
+          <div class="privacy-note">
+            <i data-lucide="lock-keyhole" class="icon" aria-hidden="true"></i>
+            <span>수집된 정보는 서비스 기획 목적 외 사용하지 않으며, 외부 공개 시 모든 식별 정보를 제거합니다. 불편한 질문은 답하지 않아도 되고, 인터뷰는 언제든 중단할 수 있습니다.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow dark">자주 묻는 질문</span>
+          <h2>걱정되는 부분을 먼저 답합니다</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>인터뷰하면 우리 아이 정보가 팔리는 건 아닐까요?</span>
+              <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">절대 아닙니다. 인터뷰 내용은 기획 목적 외 사용하지 않으며 이름, 학교명, 연락처 등 식별 정보는 외부 공개 시 제거합니다. 미성년자 정보는 더 엄격하게 다룹니다.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>결국 우리 고민으로 서비스를 만들어 팔려는 건가요?</span>
+              <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">투명하게 말씀드리면, 저희는 실제 고민을 기반으로 서비스를 만들고 싶습니다. 다만 지금 가장 중요한 것은 판매가 아니라 학부모와 학생이 정말 필요로 하는 문제가 무엇인지 정확히 듣는 일입니다.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>인터뷰 내용이 기획심의 자료에 들어가나요?</span>
+              <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">네, 들어갈 수 있습니다. 단 개인 정보는 공개하지 않고, "학부모들이 어떤 고민을 반복해서 말하고 있는가"처럼 비식별화된 인사이트와 집계된 데이터로만 활용합니다.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>다단계나 종교 활동은 아닌가요?</span>
+              <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">아닙니다. Team 310은 AI·SW마에스트로 17기 프로젝트 팀입니다. 궁금하신 점은 담당자 박세민에게 전화나 이메일로 바로 확인하실 수 있습니다.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>학원이나 교육 기관도 협력할 수 있나요?</span>
+              <i data-lucide="plus" class="icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">네, 가능합니다. 학부모 추천, 인터뷰 협력, 현황 조사 협력 등 다양한 방식으로 함께할 수 있습니다. seminpark6637@gmail.com으로 연락 주세요.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta">
+      <div class="container">
+        <h2>당신의 30분이 다른 학부모와 학생의 다음 선택을 바꿀 수 있습니다</h2>
+        <p>정부 지원 프로젝트인 우리는 당신의 고민을 기술로 풀려고 합니다. 하지만 당신의 말 없이 우리가 할 수 있는 건 아무것도 없습니다.</p>
+        <a class="button dark" href="#apply">
+          <i data-lucide="calendar-plus" class="icon" aria-hidden="true"></i>
+          지금 신청하기
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>SOMA 17기 Team 310</h2>
+          <p>입시·교육 영역에서 누적된 맥락을 읽고 다음 선택을 돕는 서비스를 준비하고 있습니다.</p>
+          <p>기획심의 예정: 2026년 5월 말</p>
+        </div>
+        <div>
+          <h3>대외협력 담당</h3>
+          <p>박세민</p>
+          <p><a href="tel:01031590818">010-3159-0818</a></p>
+          <p><a href="mailto:seminpark6637@gmail.com">seminpark6637@gmail.com</a></p>
+        </div>
+        <div>
+          <h3>관련 링크</h3>
+          <p><a href="https://sejongclass.kr" target="_blank" rel="noopener">세종클래스</a></p>
+          <p><a href="https://thekople.com" target="_blank" rel="noopener">KOPLE</a></p>
+          <p><a href="https://www.swmaestro.org" target="_blank" rel="noopener">AI·SW마에스트로 공식</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Team 310. All rights reserved.</p>
+        <p>인터뷰 정보는 서비스 기획 목적으로만 사용됩니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="stickyCta" class="sticky-cta" aria-label="하단 고정 신청 버튼">
+    <div class="sticky-inner">
+      <div class="sticky-text">30분 인터뷰 신청<span>문화상품권 · 비대면 가능</span></div>
+      <a class="button primary" href="#apply">신청하기</a>
+      <button class="sticky-close" type="button" aria-label="하단 신청 버튼 닫기" id="stickyClose">
+        <i data-lucide="x" class="icon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    const iconConfig = { attrs: { "aria-hidden": "true" } };
+    if (window.lucide) {
+      window.lucide.createIcons(iconConfig);
+    }
+
+    const stickyCta = document.getElementById("stickyCta");
+    const stickyClose = document.getElementById("stickyClose");
+    const hero = document.getElementById("hero");
+    let stickyDismissed = false;
+
+    if (stickyCta && hero) {
+      const observer = new IntersectionObserver(([entry]) => {
+        stickyCta.classList.toggle("visible", !entry.isIntersecting && !stickyDismissed);
+      }, { threshold: 0 });
+      observer.observe(hero);
+    }
+
+    if (stickyClose) {
+      stickyClose.addEventListener("click", () => {
+        stickyDismissed = true;
+        stickyCta.classList.remove("visible");
+      });
+    }
+
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isOpen = item.classList.toggle("open");
+        button.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+
+    const shareButton = document.getElementById("shareButton");
+    if (shareButton) {
+      shareButton.addEventListener("click", async () => {
+        const shareData = {
+          title: "학부모·학생 인터뷰 모집 | Team 310",
+          text: "Team 310이 자녀 입시·진로 고민을 가진 학부모님과 학생의 이야기를 듣고 있습니다.",
+          url: "https://team310.kr"
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else if (navigator.clipboard) {
+            await navigator.clipboard.writeText(shareData.url);
+            shareButton.textContent = "링크가 복사되었습니다";
+            setTimeout(() => {
+              shareButton.innerHTML = '<i data-lucide="share-2" class="icon" aria-hidden="true"></i>공유하기';
+              if (window.lucide) window.lucide.createIcons(iconConfig);
+            }, 1800);
+          }
+        } catch (error) {
+          // 사용자가 공유 시트를 닫은 경우에는 별도 처리를 하지 않습니다.
+        }
+      });
+    }
+  </script>
+</body>
+</html>
