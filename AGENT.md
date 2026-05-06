@@ -24,9 +24,9 @@ npm run preview
 
 ## Source Of Truth
 
-- `20260506-m2-parent-design-guide.md` is the primary M2 UX/design guide.
-- `20260506-landing-page-content.md` is the content reference.
-- If the two conflict, follow the M2 guide for public landing behavior.
+- `docs/landing/m2-interview-landing-brief.md` is the canonical product, content, and design brief.
+- Older root-level dated content/design documents were merged into the canonical brief.
+- If implementation and docs drift, update the canonical brief first, then mirror the change in `src/data/landingContent.js` and `src/App.css`.
 
 ## Product Direction
 
