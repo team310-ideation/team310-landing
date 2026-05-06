@@ -1,11 +1,4 @@
-import { ExternalLink } from "lucide-react";
-import {
-  focusItems,
-  noPromiseItems,
-  teamImages,
-  teamMembers,
-  workPrinciples,
-} from "../data/landingContent";
+import { teamImages, teamMembers, workPrinciples } from "../data/landingContent";
 import Reveal from "./Reveal";
 
 export default function TeamSection() {
@@ -16,8 +9,8 @@ export default function TeamSection() {
           <p className="eyebrow">Why Team 310</p>
           <h2 id="team-title">정보보다 맥락을 먼저 보는 팀입니다</h2>
           <p>
-            교육 현장, AI·Data, 사용자 검증 경험이 만나는 지점에서 학부모와 학생의 실제
-            고민을 작게 검증하고 있습니다.
+            AI·SW마에스트로 17기 선발 과정을 통과한 세 명이 교육 현장, AI·Data,
+            사용자 검증 경험을 모아 학부모와 학생의 실제 고민을 작게 검증하고 있습니다.
           </p>
         </Reveal>
 
@@ -59,9 +52,15 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <Reveal className="team-card" key={member.name} delay={index * 0.04}>
               <img className="member-photo" src={member.photo} alt={member.photoAlt} loading="lazy" />
-              <h3>{member.name}</h3>
+              <div className="member-name-row">
+                <h3>{member.name}</h3>
+                <div className="member-school" aria-label={member.school.name}>
+                  <img src={member.school.logo} alt={member.school.alt} loading="lazy" />
+                </div>
+              </div>
+              <p className="member-education">{member.education}</p>
               <p className="member-role">{member.role}</p>
-              <p>{member.summary}</p>
+              {member.summary ? <p>{member.summary}</p> : null}
               <ul>
                 {member.details.map((detail) => (
                   <li key={detail}>{detail}</li>
@@ -71,28 +70,6 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <Reveal className="promise-grid" delay={0.06}>
-          <div className="promise-block promise-no">
-            <h3>말하지 않을 것</h3>
-            {noPromiseItems.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-          <div className="promise-block promise-yes">
-            <h3>집중할 것</h3>
-            {focusItems.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal className="official-link-row" delay={0.08}>
-          <span>Team 310은 AI·SW마에스트로 17기 프로젝트 팀입니다.</span>
-          <a href="https://www.swmaestro.org" target="_blank" rel="noreferrer">
-            공식 사이트 확인
-            <ExternalLink size={17} aria-hidden="true" />
-          </a>
-        </Reveal>
       </div>
     </section>
   );

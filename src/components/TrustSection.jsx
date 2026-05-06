@@ -1,4 +1,4 @@
-import { mentorSignals, trustItems } from "../data/landingContent";
+import { mentorProfiles, mentorSignals, trustItems } from "../data/landingContent";
 import Reveal from "./Reveal";
 
 export default function TrustSection() {
@@ -7,11 +7,7 @@ export default function TrustSection() {
       <div className="container">
         <Reveal className="section-intro">
           <p className="eyebrow">Trust stack</p>
-          <h2 id="trust-title">공식성보다 구체적인 책임을 먼저 보여드립니다</h2>
-          <p>
-            학부모에게 필요한 것은 큰 숫자만이 아니라, 아이 정보를 어떻게 다루고 누가
-            책임지는지에 대한 명확한 답입니다.
-          </p>
+          <h2 id="trust-title">선발 이력보다 책임 있는 검증을 보여드립니다</h2>
         </Reveal>
 
         <div className="trust-grid">
@@ -30,7 +26,7 @@ export default function TrustSection() {
         <Reveal className="mentor-band" delay={0.08}>
           <div>
             <p className="eyebrow">Mentor network</p>
-            <h3>기술·사업·VC 관점에서 검증합니다</h3>
+            <h3>우리의 판단을 밖에서 다시 검증합니다</h3>
           </div>
           <div className="mentor-chip-row">
             {mentorSignals.map((item) => (
@@ -38,6 +34,39 @@ export default function TrustSection() {
             ))}
           </div>
         </Reveal>
+
+        <div className="mentor-grid">
+          {mentorProfiles.map((mentor, index) => (
+            <Reveal
+              className={`mentor-card${mentor.pending ? " mentor-card-pending" : ""}`}
+              key={mentor.name}
+              delay={0.1 + index * 0.04}
+            >
+              <div className="mentor-card-header">
+                <span className="mentor-avatar" aria-hidden="true">
+                  {mentor.name.slice(0, 1)}
+                </span>
+                <span className={`mentor-status${mentor.pending ? " pending" : ""}`}>
+                  {mentor.status}
+                </span>
+              </div>
+              <h3>{mentor.name}</h3>
+              <p className="mentor-role">{mentor.role}</p>
+              <p className="mentor-context">{mentor.context}</p>
+              {mentor.summary ? <p>{mentor.summary}</p> : null}
+              <div className="mentor-highlight-row">
+                {mentor.highlights.map((highlight) => (
+                  <span key={highlight}>{highlight}</span>
+                ))}
+              </div>
+              <ul>
+                {mentor.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

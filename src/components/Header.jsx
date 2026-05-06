@@ -1,10 +1,13 @@
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ApplyLink from "./ApplyLink";
 
 const navItems = [
+  { label: "미션", href: "#mission" },
   { label: "고민 선택", href: "#pain" },
   { label: "인터뷰 방식", href: "#interview" },
-  { label: "팀", href: "#team" },
+  { label: "팀소개", href: "#team" },
+  { label: "팀영상", href: "#videos" },
   { label: "안심 정보", href: "#trust" },
 ];
 
@@ -26,10 +29,10 @@ export default function Header() {
         ))}
       </nav>
 
-      <a className="header-cta" href="#apply">
+      <ApplyLink className="header-cta">
         신청하기
         <ArrowRight size={18} aria-hidden="true" />
-      </a>
+      </ApplyLink>
 
       <button
         className="menu-button"

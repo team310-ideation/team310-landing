@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { interviewSteps, safetyNotes } from "../data/landingContent";
+import ApplyLink from "./ApplyLink";
 import Reveal from "./Reveal";
 
 export default function InterviewProcess() {
@@ -7,12 +8,8 @@ export default function InterviewProcess() {
     <section className="section" id="interview" aria-labelledby="interview-title">
       <div className="container">
         <Reveal className="section-intro">
-          <p className="eyebrow">30-minute interview</p>
+          <p className="eyebrow">50-minute interview</p>
           <h2 id="interview-title">인터뷰는 부담 없이, 필요한 만큼만 진행합니다</h2>
-          <p>
-            학교 상담을 대체하거나 바로 서비스를 판매하려는 시간이 아닙니다. 실제 고민을 듣고,
-            우리가 이해한 문제가 맞는지 확인하는 시간입니다.
-          </p>
         </Reveal>
 
         <div className="process-grid">
@@ -46,10 +43,10 @@ export default function InterviewProcess() {
             <strong>불편한 질문은 답하지 않아도 됩니다.</strong>
             <span>인터뷰 내용은 비식별화 후 기획 검증에만 사용합니다.</span>
           </div>
-          <a className="button secondary-button" href="#apply">
-            신청 항목 보기
+          <ApplyLink className="button secondary-button">
+            신청 카드 보기
             <ArrowRight size={19} aria-hidden="true" />
-          </a>
+          </ApplyLink>
         </Reveal>
       </div>
     </section>

@@ -11,7 +11,7 @@ if (!apiKey) {
 }
 
 const API_URL = "https://api.tally.so/forms";
-const title = "Team 310 30분 인터뷰 신청";
+const title = "Team 310 50분 인터뷰 신청";
 const existingFormId =
   process.env.TALLY_CREATE_NEW === "1"
     ? ""
@@ -74,7 +74,7 @@ function formTitle(html) {
     title,
     html,
     button: {
-      label: "30분 인터뷰 신청하기",
+      label: "50분 인터뷰 신청하기",
     },
   });
 }
@@ -184,7 +184,7 @@ function checkboxQuestion({ title: question, options, isRequired = false }) {
 }
 
 const blocks = [
-  formTitle('<span style="color: #102035"><b>Team 310 30분 인터뷰 신청</b></span>'),
+  formTitle('<span style="color: #102035"><b>Team 310 50분 인터뷰 신청</b></span>'),
   text(
     "학부모님이 편하게 이야기하실 수 있도록 필요한 정보만 받습니다. 응답 후 가능한 시간대를 조율해 Team 310이 직접 연락드립니다.",
   ),

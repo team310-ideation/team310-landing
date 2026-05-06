@@ -1,11 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import ApplySection from "./components/ApplySection";
+import ApplyLink from "./components/ApplyLink";
 import FaqSection from "./components/FaqSection";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import InterviewProcess from "./components/InterviewProcess";
+import MissionSection from "./components/MissionSection";
+import OfflineLocationSection from "./components/OfflineLocationSection";
 import PainSegment from "./components/PainSegment";
 import TeamSection from "./components/TeamSection";
+import TeamVideoSection from "./components/TeamVideoSection";
 import TrustSection from "./components/TrustSection";
 import { contactEmail, footerLinks } from "./data/landingContent";
 
@@ -16,18 +20,11 @@ export default function App() {
       <main>
         <Hero />
 
-        <section className="intro-search-copy" aria-label="Team 310 소개">
-          <div className="container">
-            <p>
-              Team 310은 AI·SW마에스트로 17기 프로젝트 팀으로, 중3·예비고1 학부모와
-              학생의 입시·진로 고민을 듣는 30분 인터뷰를 진행합니다.
-            </p>
-          </div>
-        </section>
-
+        <MissionSection />
         <PainSegment />
         <InterviewProcess />
         <TeamSection />
+        <TeamVideoSection />
         <TrustSection />
         <ApplySection />
         <FaqSection />
@@ -40,12 +37,14 @@ export default function App() {
               더 많은 정보가 아니라, 내 아이의 누적된 맥락을 읽고 지금 무엇을 우선해야
               하는지 아는 경험을 만들고 있습니다.
             </p>
-            <a className="button primary-button" href="#apply">
+            <ApplyLink className="button primary-button">
               인터뷰 신청하기
               <ArrowRight size={20} aria-hidden="true" />
-            </a>
+            </ApplyLink>
           </div>
         </section>
+
+        <OfflineLocationSection />
       </main>
 
       <footer className="site-footer">
@@ -55,7 +54,7 @@ export default function App() {
               <span className="brand-mark">310</span>
               <span>Team 310</span>
             </span>
-            <p>학부모·학생 30분 인터뷰 모집</p>
+            <p>학부모·학생 50분 인터뷰 모집</p>
           </div>
           <div>
             <h2>문의</h2>

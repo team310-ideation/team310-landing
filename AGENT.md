@@ -36,17 +36,19 @@ npm run preview
 - Prioritize fast problem matching, trust, privacy, and clear interview action.
 - Do not frame AI as magic. Say that people listen first, and AI helps organize context.
 - Keep motion subtle: 180-260ms, small distance, one-time reveals, reduced-motion support.
-- Keep CTA copy grounded: 30-minute interview, no required upload, consent-based recording, gift voucher.
+- Keep CTA copy grounded: 50-minute interview, no required upload, consent-based recording, gift voucher.
 
 ## Tally
 
-The application is ready for Tally embed through:
+The application uses the public Tally form link configured through:
 
 ```bash
 VITE_TALLY_FORM_URL=https://tally.so/r/your-form-id
 ```
 
 `VITE_TALLY_FORM_URL` accepts a public Tally form URL or public form ID. Do not put a private Tally API key in a committed frontend env file.
+
+Header, hero, body, closing, and mobile sticky CTAs should first scroll to `#apply`. Only the button inside the apply card should open the public Tally form.
 
 Until a Tally form URL is provided, the apply section falls back to an email-based application form using:
 
@@ -58,6 +60,7 @@ Do not hard-code a private Tally API key in the frontend.
 
 When creating or updating Tally forms through the API, read `TALLY_API_KEY` from ignored `.env` only.
 If `.env.production` already contains `VITE_TALLY_FORM_URL`, the form script updates that public form by default. Use `TALLY_CREATE_NEW=1 npm run forms:tally:create` only when a separate new form is intended.
+Keep public Tally URLs in tracked mode-specific env files such as `.env.development` and `.env.production`; keep only secrets in ignored `.env`.
 
 ## Content Constraints
 
@@ -81,3 +84,5 @@ If `.env.production` already contains `VITE_TALLY_FORM_URL`, the form script upd
 - Commit optimized web-ready files from `src/assets/images/team/optimized/`.
 - Run `npm run images:team` after replacing team originals.
 - Use real team photos before stock photos when the layout needs trust or human presence.
+- School logos currently use temporary landing badge SVGs in `src/assets/images/schools/`; replace them with official CI assets only when usage permission/files are provided.
+- AI·SW Maestro official logo originals live in `public/asm-logo/`; use the optimized web variants for UI placement.

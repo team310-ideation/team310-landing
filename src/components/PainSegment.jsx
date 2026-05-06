@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { painPoints } from "../data/landingContent";
+import ApplyLink from "./ApplyLink";
 import Reveal from "./Reveal";
 
 export default function PainSegment() {
@@ -68,10 +69,10 @@ export default function PainSegment() {
                     <li key={want}>{want}</li>
                   ))}
                 </ul>
-                <a className="text-link" href="#apply">
+                <ApplyLink className="text-link">
                   이 고민으로 인터뷰 신청하기
                   <ArrowRight size={18} aria-hidden="true" />
-                </a>
+                </ApplyLink>
               </div>
             </motion.article>
           </AnimatePresence>

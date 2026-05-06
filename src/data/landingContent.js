@@ -18,7 +18,6 @@ import {
   School,
   SearchCheck,
   ShieldCheck,
-  UserRoundCheck,
   UsersRound,
   Video,
 } from "lucide-react";
@@ -27,20 +26,16 @@ import junhyeokProfile from "../assets/images/team/optimized/junhyeok-profile.we
 import sejongProfile from "../assets/images/team/optimized/sejong-profile.webp";
 import seminProfile from "../assets/images/team/optimized/semin-profile.webp";
 import seminSejongTogether from "../assets/images/team/optimized/semin-sejong-together.webp";
+import mjuLogo from "../assets/images/schools/mju-logo.gif";
+import snuLogo from "../assets/images/schools/snu-logo.png";
+import uosLogo from "../assets/images/schools/uos-logo.png";
 
 export const contactEmail =
   import.meta.env.VITE_CONTACT_EMAIL || "lifedesigner88@gmail.com";
 
 const tallyFormReference = import.meta.env.VITE_TALLY_FORM_URL || "";
 
-function withTallyEmbedOptions(url) {
-  url.searchParams.set("hideTitle", "1");
-  url.searchParams.set("transparentBackground", "1");
-  url.searchParams.set("dynamicHeight", "1");
-  return url.toString();
-}
-
-function normalizeTallyEmbedUrl(value) {
+function normalizeTallyPublicUrl(value) {
   const reference = value.trim();
 
   if (!reference) {
@@ -57,23 +52,20 @@ function normalizeTallyEmbedUrl(value) {
 
     const [, pathType, formId] = url.pathname.split("/");
 
-    if (pathType === "embed" && formId) {
-      return withTallyEmbedOptions(url);
-    }
-
-    if ((pathType === "r" || pathType === "forms") && formId) {
-      return withTallyEmbedOptions(new URL(`/embed/${formId}`, "https://tally.so"));
+    if ((pathType === "r" || pathType === "forms" || pathType === "embed") && formId) {
+      return new URL(`/r/${formId}`, "https://tally.so").toString();
     }
   } catch {
     if (/^[A-Za-z0-9_-]+$/.test(reference)) {
-      return withTallyEmbedOptions(new URL(`/embed/${reference}`, "https://tally.so"));
+      return new URL(`/r/${reference}`, "https://tally.so").toString();
     }
   }
 
   return "";
 }
 
-export const tallyEmbedUrl = normalizeTallyEmbedUrl(tallyFormReference);
+export const tallyPublicUrl = normalizeTallyPublicUrl(tallyFormReference);
+export const applySectionHref = "#apply";
 
 export const teamImages = {
   groupPortrait,
@@ -88,16 +80,61 @@ export const heroTopics = [
 ];
 
 export const heroTrustItems = [
-  { label: "AI·SW마에스트로 17기", icon: BadgeCheck },
+  { label: "17기 선발 과정 통과", icon: BadgeCheck },
+  { label: "AI로 사회문제 해결", icon: Brain },
   { label: "100+ 인터뷰 기반 검증", icon: UsersRound },
   { label: "자료 업로드 없이 가능", icon: ShieldCheck },
 ];
 
 export const quickFacts = [
-  { value: "30분", label: "전화·Zoom·대면 선택" },
+  { value: "17기", label: "AI·SW마에스트로 선발팀" },
+  { value: "50분", label: "전화·Zoom·대면 선택" },
   { value: "100+", label: "3월부터 진행한 문제 인터뷰" },
-  { value: "5개", label: "핵심 페인포인트 검증" },
   { value: "선택", label: "녹음·자료 공유 모두 동의 기반" },
+];
+
+export const socialMissionItems = [
+  {
+    title: "교육 의사결정 격차",
+    text: "입시 정보는 넘치지만, 내 아이 기록을 기준으로 지금 무엇을 우선해야 하는지 판단하기 어렵습니다.",
+    icon: Brain,
+  },
+  {
+    title: "누적 맥락의 단절",
+    text: "상담, 학원, 학교 기록이 흩어져 있어 매 학기 같은 고민이 반복됩니다. AI로 이 맥락을 구조화하려 합니다.",
+    icon: NotebookTabs,
+  },
+  {
+    title: "안전한 AI 활용",
+    text: "미성년자 기록과 개인정보를 가볍게 다루지 않고, 사람의 판단을 돕는 책임 있는 보조 도구로 검증합니다.",
+    icon: ShieldCheck,
+  },
+];
+
+export const asmProofItems = [
+  "AI·SW마에스트로 17기 선발 과정 통과",
+  "지원서 검토·코딩 테스트·심층면접 기반 선발",
+  "서울 300명·부산 150명 규모 공식 모집 과정",
+];
+
+export const asmBrandLogo = {
+  src: "/asm-logo/asm-signature-web.png",
+  alt: "AI·SW마에스트로 공식 로고",
+};
+
+export const teamVideos = [
+  {
+    title: "[02화] - 멘토헌팅",
+    subtitle: "Directed by 준혁 · AI 소마 17기",
+    embedUrl: "https://www.youtube-nocookie.com/embed/AB3xpRJejNE?rel=0",
+    watchUrl: "https://youtu.be/AB3xpRJejNE",
+  },
+  {
+    title: "[03화] - 뉴페이스",
+    subtitle: "Directed by 준혁 · AI 소마 17기",
+    embedUrl: "https://www.youtube-nocookie.com/embed/pAjVOlvbz58?rel=0",
+    watchUrl: "https://youtu.be/pAjVOlvbz58",
+  },
 ];
 
 export const painPoints = [
@@ -207,28 +244,44 @@ export const teamMembers = [
   {
     name: "박세종",
     role: "Team Lead, 교육자형 개발자",
+    education: "서울시립대학교\n전자전기컴퓨터공학부 학사",
+    school: {
+      name: "서울시립대학교",
+      logo: uosLogo,
+      alt: "서울시립대학교 로고",
+    },
     photo: sejongProfile,
     photoAlt: "꽃이 핀 야외 배경 앞에 선 박세종",
-    summary:
-      "국제캠프 PM, 입시 데이터 3만 건 분석, 진로코칭 경험을 바탕으로 교육 맥락을 제품 언어로 옮깁니다.",
-    details: ["550명+·18개국 국제캠프 운영", "입시 컨설팅·진로코칭", "48명 교육 서비스 사용자 검증"],
+    details: [
+      "전) 상상코칭 입시컨설턴트",
+      "박문호의자연과학세상 이사",
+      "월드유스랠리 12개국 국제캠프 PM",
+    ],
   },
   {
     name: "박준혁",
     role: "AI & Data, 사용자 맥락 연구",
+    education: "서울대학교\n자유전공학부, 인류학과·컴퓨터공학과",
+    school: {
+      name: "서울대학교",
+      logo: snuLogo,
+      alt: "서울대학교 로고",
+    },
     photo: junhyeokProfile,
     photoAlt: "계단에 앉아 웃고 있는 박준혁",
-    summary:
-      "기술을 먼저 과시하기보다 학부모와 학생의 실제 발화를 데이터 구조로 읽는 역할을 맡고 있습니다.",
-    details: ["알고리즘 역량", "인류학적 현장 조사 관점", "LLM 기반 문제 구조화"],
+    details: ["한국정보올림피아드(KOI) 은상", "인류학적 현장 조사 관점", "LLM 기반 문제 구조화"],
   },
   {
     name: "박세민",
-    role: "PM & Backend, 사용자 검증",
+    role: "PM & Fullstack",
+    education: "명지대학교\n데이터사이언스, 데이터테크놀로지",
+    school: {
+      name: "명지대학교",
+      logo: mjuLogo,
+      alt: "명지대학교 로고",
+    },
     photo: seminProfile,
     photoAlt: "야외 산책로에서 카메라를 바라보는 박세민",
-    summary:
-      "실제 사용자가 모이는 커뮤니티와 제품 검증 경험을 바탕으로 인터뷰와 실행 사이를 연결합니다.",
     details: ["KOPLE 2,700명 운영", "LOI 기반 시장 검증", "기획·개발·검증 통합"],
   },
 ];
@@ -241,7 +294,7 @@ export const workPrinciples = [
   },
   {
     title: "맥락을 구조화합니다",
-    text: "정보를 더 주는 것이 아니라 지금 우선할 질문을 찾습니다.",
+    text: "AI를 과시하기보다 흩어진 기록과 발화를 묶어 지금 우선할 질문을 찾습니다.",
     icon: Route,
   },
   {
@@ -258,14 +311,14 @@ export const workPrinciples = [
 
 export const trustItems = [
   {
-    title: "정부 지원 프로젝트",
-    text: "AI·SW마에스트로 17기 선발 과정 통과 후 기획심의를 준비 중인 팀입니다.",
+    title: "AI·SW마에스트로 선발팀",
+    text: "서울 300명·부산 150명 규모의 17기 모집에서 지원서 검토, 코딩 테스트, 심층면접을 거쳐 선발된 팀입니다.",
     icon: BadgeCheck,
   },
   {
-    title: "실명 담당자",
-    text: `인터뷰 문의는 Team Lead 박세종이 ${contactEmail}로 직접 받습니다.`,
-    icon: UserRoundCheck,
+    title: "AI 사회문제 해결 미션",
+    text: "교육 정보는 많지만 내 아이 기준 판단이 어려운 문제를 AI 기반 맥락 구조화로 줄이려 합니다.",
+    icon: Brain,
   },
   {
     title: "개인정보 원칙",
@@ -276,6 +329,49 @@ export const trustItems = [
     title: "멘토 네트워크",
     text: "기술·사업·VC 관점의 멘토링을 받으며 문제 정의와 검증을 진행합니다.",
     icon: Handshake,
+  },
+];
+
+export const mentorProfiles = [
+  {
+    name: "고세환",
+    status: "확정",
+    role: "공식 담당 멘토",
+    context: "KIST 정보보안/DX/AX 전략 총괄",
+    highlights: ["KIST 정보보안·DX·AX", "CISSP·CPPG", "창업 4회 경험"],
+    details: [
+      "KT 보안컨설팅·네트워크 보안관제 경험",
+      "정부지원사업·기획심의·TIPS 전략 멘토링",
+      "개인정보·보안·서비스 운영 리스크 점검",
+      "VC 네트워크 연결과 피칭 코칭 지원",
+    ],
+  },
+  {
+    name: "조재홍",
+    status: "확정",
+    role: "기술·창업 멘토",
+    context: "삼성전자 AI플랫폼센터, 에듀테크 CTO 경험",
+    highlights: ["삼성전자 AI플랫폼센터", "모바일·IoT 20년+", "10만 다운로드 서비스"],
+    details: [
+      "삼성리서치·무선사업부 기반 모바일·SmartThings 경험",
+      "에듀테크 필로토 CTO로 앱·서버 개발과 운영",
+      "데이터 수집·분석 기반 제품 개선 경험",
+      "AI·SW마에스트로 다수 팀 MVP·출시 멘토링",
+    ],
+  },
+  {
+    name: "홍순엽",
+    status: "추가 협의 예정",
+    role: "VC 비기술 멘토",
+    context: "모비딕벤처스 벤처투자팀",
+    highlights: ["딥테크·ICT·SW 투자", "TIPS·POST-TIPS", "BM·피칭 전략"],
+    details: [
+      "예비·초기창업패키지, 도전 K-스타트업 심사·평가 경험",
+      "전자공학 기반 기술 사업성 검토 관점",
+      "기술거래사·기술신용평가사(TCB) 기반 검증",
+      "투자 유치 로드맵과 기획심의 전략 자문 예정",
+    ],
+    pending: true,
   },
 ];
 
@@ -292,6 +388,24 @@ export const applyFields = [
   "가장 가까운 고민",
   "희망 인터뷰 방식과 시간대",
 ];
+
+export const offlineLocation = {
+  title: "오프라인 인터뷰 장소",
+  name: "AI·SW마에스트로 연수센터",
+  building: "포스트타워 7층, 12층",
+  address: "서울특별시 마포구 마포대로 89 포스트타워 7층, 12층",
+  postalCode: "04156",
+  transit: "공덕역 1번 출구 앞, 도보 약 300m",
+  note: "오프라인 인터뷰는 신청 후 일정과 장소를 확정한 경우에만 진행합니다.",
+  kakaoMapUrl:
+    "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C%2089%20%ED%8F%AC%EC%8A%A4%ED%8A%B8%ED%83%80%EC%9B%8C",
+  kakaoRouteUrl:
+    "https://map.kakao.com/link/to/AI%C2%B7SW%EB%A7%88%EC%97%90%EC%8A%A4%ED%8A%B8%EB%A1%9C%20%EC%97%B0%EC%88%98%EC%84%BC%ED%84%B0,37.5431769,126.9499679",
+  roughMap: {
+    timestamp: "1747116575994",
+    key: "2oz4e",
+  },
+};
 
 export const faqs = [
   {
@@ -312,7 +426,7 @@ export const faqs = [
   {
     question: "서비스를 바로 판매하려는 인터뷰인가요?",
     answer:
-      "아닙니다. 지금은 학부모와 학생의 실제 고민을 듣고 문제 가설을 검증하는 단계입니다. 제품 방향을 정하기 위한 30분 인터뷰입니다.",
+      "아닙니다. 지금은 학부모와 학생의 실제 고민을 듣고 문제 가설을 검증하는 단계입니다. 제품 방향을 정하기 위한 50분 인터뷰입니다.",
   },
   {
     question: "누가 참여하면 좋나요?",
@@ -326,26 +440,14 @@ export const faqs = [
   },
 ];
 
-export const noPromiseItems = [
-  "합격 보장",
-  "성적 상승 보장",
-  "AI 학생부 문장 대필",
-];
-
-export const focusItems = [
-  "내 아이 기록 기준 우선순위",
-  "상담 전 질문 정리",
-  "누적 맥락 기반 다음 선택",
-];
-
 export const footerLinks = [
   {
-    label: "KOPLE",
-    href: "https://thekople.com",
+    label: "AI·SW마에스트로",
+    href: "https://www.swmaestro.ai",
   },
   {
-    label: "AI·SW마에스트로",
-    href: "https://www.swmaestro.org",
+    label: "Team 310 유튜브",
+    href: "https://www.youtube.com/@asm17_team310",
   },
 ];
 

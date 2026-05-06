@@ -1,12 +1,13 @@
-import { ArrowRight, Mail, Send } from "lucide-react";
+import { ArrowRight, ExternalLink, Send } from "lucide-react";
 import { useMemo, useState } from "react";
 import {
   applyFields,
   applySummaryIcons,
   contactEmail,
   painPoints,
-  tallyEmbedUrl,
+  tallyPublicUrl,
 } from "../data/landingContent";
+import ApplyLink from "./ApplyLink";
 import Reveal from "./Reveal";
 
 const defaultFormState = {
@@ -20,7 +21,7 @@ const defaultFormState = {
 };
 
 function buildMailto(formState) {
-  const subject = encodeURIComponent("[Team 310] 30분 인터뷰 신청");
+  const subject = encodeURIComponent("[Team 310] 50분 인터뷰 신청");
   const body = encodeURIComponent(
     [
       "Team 310 인터뷰 신청",
@@ -115,19 +116,39 @@ function FallbackApplyForm() {
   );
 }
 
+function TallyApplyCard() {
+  return (
+    <div className="tally-link-card">
+      <div className="tally-link-icon">
+        <ExternalLink size={26} aria-hidden="true" />
+      </div>
+      <h3>Tally 신청 폼으로 이동합니다</h3>
+      <p>
+        새 창에서 신청서를 작성하면 Team 310이 확인 후 가능한 시간대를 조율해
+        연락드립니다.
+      </p>
+      <a className="button primary-button" href={tallyPublicUrl} target="_blank" rel="noreferrer">
+        Tally에서 신청하기
+        <ExternalLink size={19} aria-hidden="true" />
+      </a>
+      <div className="tally-link-meta">
+        <span>자료 업로드 필수 아님</span>
+        <span>녹음은 동의 시에만</span>
+        <span>응답 후 일정 조율</span>
+      </div>
+    </div>
+  );
+}
+
 export default function ApplySection() {
-  const hasTally = Boolean(tallyEmbedUrl);
+  const hasTally = Boolean(tallyPublicUrl);
 
   return (
     <section className="section apply-section" id="apply" aria-labelledby="apply-title">
       <div className="container apply-layout">
         <Reveal className="apply-copy">
           <p className="eyebrow">Apply</p>
-          <h2 id="apply-title">30분 인터뷰를 신청해 주세요</h2>
-          <p>
-            아래 항목을 남겨주시면 가능한 시간대를 조율해 연락드립니다. 자료 업로드는 필수가
-            아니며, 녹음은 동의한 경우에만 진행합니다.
-          </p>
+          <h2 id="apply-title">50분 인터뷰를 신청해 주세요</h2>
 
           <div className="apply-summary">
             {applyFields.map((field, index) => {
@@ -140,35 +161,17 @@ export default function ApplySection() {
               );
             })}
           </div>
-
-          <div className="contact-card">
-            <Mail size={22} aria-hidden="true" />
-            <div>
-              <strong>문의</strong>
-              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-            </div>
-          </div>
         </Reveal>
 
         <Reveal className="apply-panel" delay={0.05}>
-          {hasTally ? (
-            <iframe
-              src={tallyEmbedUrl}
-              title="Team 310 인터뷰 신청 Tally 폼"
-              loading="lazy"
-              width="100%"
-              height="650"
-            />
-          ) : (
-            <FallbackApplyForm />
-          )}
+          {hasTally ? <TallyApplyCard /> : <FallbackApplyForm />}
         </Reveal>
       </div>
 
-      <a className="sticky-mobile-cta" href="#apply">
-        30분 인터뷰 신청
+      <ApplyLink className="sticky-mobile-cta">
+        50분 인터뷰 신청
         <ArrowRight size={18} aria-hidden="true" />
-      </a>
+      </ApplyLink>
     </section>
   );
 }

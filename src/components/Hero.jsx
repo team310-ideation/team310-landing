@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight, Gift, ShieldCheck, TimerReset } from "lucide-react";
 import { useEffect, useState } from "react";
 import { heroTopics, heroTrustItems, quickFacts } from "../data/landingContent";
+import ApplyLink from "./ApplyLink";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -25,7 +26,7 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.22, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          AI·SW마에스트로 17기 프로젝트 팀
+          치열한 AI·SW마에스트로 17기 선발 과정 통과
         </motion.p>
 
         <motion.h1
@@ -34,9 +35,7 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.04, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          학부모·학생
-          <br />
-          인터뷰 모집
+          인공지능의 힘으로 대한민국 사교육 문제를 풉니다.
         </motion.h1>
 
         <motion.div
@@ -67,9 +66,11 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.12, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          생기부·예비고1·담임상담 준비가 막막한 학부모님과 학생의 이야기를 30분만
-          들려주세요. Team 310은 입시 정보보다 우리 아이 기록 기준의 우선순위가 필요한
-          문제를 검증하고 있습니다.
+          Team 310은 인공지능의 힘으로 교육의 정보격차를 줄이려는 팀입니다.
+          <br />
+          생기부·예비고1·담임상담 준비가 막막한 학부모님과 학생의 이야기를 듣고
+          <br />
+          내 아이 기록 기준의 다음 선택을 돕는 AI 서비스를 검증하고 있습니다.
         </motion.p>
 
         <motion.div
@@ -78,10 +79,10 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.16, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          <a className="button primary-button" href="#apply">
-            30분 인터뷰 신청하기
+          <ApplyLink className="button primary-button">
+            50분 인터뷰 신청하기
             <ArrowRight size={20} aria-hidden="true" />
-          </a>
+          </ApplyLink>
           <a className="button ghost-button" href="#pain">
             어떤 이야기를 듣나요?
             <ArrowDown size={20} aria-hidden="true" />
@@ -124,7 +125,7 @@ export default function Hero() {
       <div className="mobile-assurance" aria-label="인터뷰 안심 정보">
         <span>
           <TimerReset size={17} aria-hidden="true" />
-          30분
+          50분
         </span>
         <span>
           <ShieldCheck size={17} aria-hidden="true" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Team 310</title>
+  <rect width="512" height="512" rx="92" fill="#102035"/>
+  <rect x="34" y="34" width="444" height="444" rx="70" fill="none" stroke="#F97316" stroke-width="18"/>
+  <text x="256" y="314" text-anchor="middle"
+    font-family="Pretendard, Inter, Arial, sans-serif"
+    font-size="160" font-weight="900" letter-spacing="-4" fill="#FFFDF9">310</text>
+</svg>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Team 310 학부모·학생 인터뷰 모집</title>
+  <desc id="desc">학부모의 입시 고민을 듣고 AI로 맥락을 정리하는 Team 310 오픈그래프 이미지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFDF9"/>
+      <stop offset="0.55" stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#102035" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="54" y="54" width="1092" height="522" rx="28" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2" filter="url(#shadow)"/>
+
+  <g transform="translate(94 92)">
+    <rect width="90" height="90" rx="18" fill="#102035"/>
+    <text x="45" y="57" text-anchor="middle"
+      font-family="Pretendard, Inter, Arial, sans-serif"
+      font-size="30" font-weight="900" fill="#FFFDF9">310</text>
+    <text x="112" y="33" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="24" font-weight="900" fill="#1E3A5F">Team 310</text>
+    <text x="112" y="68" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="20" font-weight="800" fill="#5F6B7A">AI·SW마에스트로 17기 선발팀</text>
+  </g>
+
+  <g transform="translate(94 258)">
+    <text x="0" y="0" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="60" font-weight="900" fill="#102035">아이 입시 고민,</text>
+    <text x="0" y="76" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="60" font-weight="900" fill="#102035">50분만 들려주세요</text>
+    <text x="0" y="128" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="26" font-weight="700" fill="#4A5565">Team 310이 학부모님의 이야기를 듣고</text>
+    <text x="0" y="166" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="26" font-weight="700" fill="#4A5565">AI로 생기부·상담·진로 맥락을 함께 정리합니다</text>
+  </g>
+
+  <g transform="translate(92 502)">
+    <rect width="178" height="48" rx="14" fill="#F97316"/>
+    <text x="89" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="19" font-weight="900" fill="#FFFFFF">50분 인터뷰</text>
+    <rect x="194" width="212" height="48" rx="14" fill="#EEF6F0"/>
+    <text x="300" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="19" font-weight="900" fill="#4A7C59">자료 업로드 선택</text>
+    <rect x="422" width="246" height="48" rx="14" fill="#EFF6FF"/>
+    <text x="545" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+      font-size="19" font-weight="900" fill="#1D4ED8">Tally에서 신청</text>
+  </g>
+
+  <g transform="translate(744 136)">
+    <rect x="0" y="0" width="344" height="318" rx="28" fill="#F7F8F9" stroke="#E5E7EB" stroke-width="2"/>
+    <circle cx="116" cy="114" r="50" fill="#F97316"/>
+    <circle cx="227" cy="114" r="50" fill="#2563EB"/>
+    <path d="M74 219c16-38 51-58 94-58s78 20 94 58" fill="none" stroke="#102035" stroke-width="16" stroke-linecap="round"/>
+    <path d="M186 219c13-32 43-50 80-50s66 18 80 50" fill="none" stroke="#4A7C59" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+
+    <g transform="translate(-40 248)">
+      <rect width="226" height="88" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+      <path d="M42 88l-20 34 58-34" fill="#FFFFFF"/>
+      <text x="28" y="36" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+        font-size="19" font-weight="900" fill="#102035">무엇부터 해야</text>
+      <text x="28" y="64" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+        font-size="19" font-weight="900" fill="#102035">할까요?</text>
+    </g>
+
+    <g transform="translate(154 248)">
+      <rect width="230" height="88" rx="22" fill="#102035"/>
+      <path d="M168 88l54 34-18-34" fill="#102035"/>
+      <text x="28" y="36" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+        font-size="19" font-weight="900" fill="#FFFDF9">함께 듣고</text>
+      <text x="28" y="64" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
+        font-size="19" font-weight="900" fill="#FFFDF9">정리할게요</text>
+    </g>
+  </g>
+</svg>

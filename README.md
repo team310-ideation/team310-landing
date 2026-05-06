@@ -1,6 +1,6 @@
 # Team 310 Landing
 
-Team 310의 학부모·학생 30분 인터뷰 모집 랜딩페이지입니다.
+Team 310의 학부모·학생 50분 인터뷰 모집 랜딩페이지입니다.
 
 이 페이지의 목적은 중3·예비고1 학부모와 학생이 겪는 생기부 해석, 첫 고등학교 준비, 담임 상담 질문 정리, 개인정보 불안 등의 문제를 빠르게 매칭하고 인터뷰 신청으로 이어지게 만드는 것입니다.
 
@@ -11,7 +11,7 @@ Team 310의 학부모·학생 30분 인터뷰 모집 랜딩페이지입니다.
 - Framer Motion
 - lucide-react
 - Plain CSS
-- Tally form embed 준비
+- Tally 공개 폼 링크 이동 구조
 - Vercel static deployment
 
 ## Project Structure
@@ -66,6 +66,7 @@ http://localhost:5173/
 npm run dev        # 로컬 개발 서버 실행
 npm run build      # 프로덕션 빌드
 npm run preview    # 빌드 결과 로컬 미리보기
+npm run assets:brand # 파비콘과 OG 이미지 생성
 npm run images:team # 팀 사진 원본을 webp 최적화 이미지로 변환
 npm run forms:tally:create # .env의 Tally API 키로 인터뷰 폼 생성
 ```
@@ -83,9 +84,9 @@ VITE_TALLY_FORM_URL=https://tally.so/r/your-form-id
 VITE_CONTACT_EMAIL=lifedesigner88@gmail.com
 ```
 
-`VITE_TALLY_FORM_URL`에는 Tally 공개 폼 URL 또는 공개 form ID를 넣습니다. 값이 없으면 인터뷰 신청 영역은 이메일 기반 fallback 폼으로 동작합니다. Tally API 키 같은 private key는 frontend에 넣지 않습니다.
+`VITE_TALLY_FORM_URL`에는 Tally 공개 폼 URL 또는 공개 form ID를 넣습니다. 상단과 본문 CTA는 먼저 랜딩의 신청 섹션으로 이동하고, 신청 섹션 안의 버튼만 Tally 공개 링크로 이동합니다. 값이 없으면 인터뷰 신청 영역은 이메일 기반 fallback 폼으로 동작합니다. Tally API 키 같은 private key는 frontend에 넣지 않습니다.
 
-프로덕션 기본 공개 폼 주소는 `.env.production`의 `VITE_TALLY_FORM_URL`에 둡니다.
+로컬 개발 기본 공개 폼 주소는 `.env.development`, 프로덕션 기본 공개 폼 주소는 `.env.production`의 `VITE_TALLY_FORM_URL`에 둡니다.
 
 Tally API 키는 Git에 올리지 않는 `.env`에만 둡니다. 공개 폼 URL이 이미 `.env.production`에 있으면 `npm run forms:tally:create`는 기존 폼을 현재 랜딩 톤에 맞춰 업데이트하고, 새 폼이 필요하면 `TALLY_CREATE_NEW=1 npm run forms:tally:create`로 실행합니다.
 
@@ -111,6 +112,22 @@ src/assets/images/team/optimized/
 
 ```bash
 npm run images:team
+```
+
+학교 로고는 공식 CI 파일을 제공받기 전까지 랜딩용 임시 배지 SVG를 사용합니다.
+
+```text
+src/assets/images/schools/
+```
+
+공식 파일로 교체할 때는 `src/data/landingContent.js`의 `teamMembers[].school.logo`만 바꾸면 됩니다.
+학교 공식 CI는 사용 허가와 적용 규정을 확인한 뒤 교체합니다.
+
+AI·SW마에스트로 공식 로고 원본은 `public/asm-logo/`에 두고, 랜딩에서는 웹 최적화본을 사용합니다.
+
+```text
+public/asm-logo/asm-signature-web.png
+public/asm-logo/asm-symbol-web.png
 ```
 
 ## Deployment
