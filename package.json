@@ -6,15 +6,19 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "forms:tally:create": "node scripts/create-tally-interview-form.mjs",
+    "images:team": "node scripts/prepare-team-images.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.468.0",
-    "vite": "^7.2.4",
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "vite": "^7.2.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
 }

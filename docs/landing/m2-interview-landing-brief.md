@@ -266,8 +266,9 @@ asm_public_expression:
 ```yaml
 provider: "Tally"
 env:
-  VITE_TALLY_FORM_URL: "https://tally.so/r/your-form-id"
+  VITE_TALLY_FORM_URL: "https://tally.so/r/dWQyQD"
   VITE_CONTACT_EMAIL: "lifedesigner88@gmail.com"
+public_form_url: "https://tally.so/r/dWQyQD"
 required_fields:
   - "이름"
   - "연락처"
@@ -276,14 +277,16 @@ required_fields:
   - "가장 가까운 고민"
   - "희망 방식: 전화 / Zoom / 대면 / 카카오톡 조율"
   - "편한 시간대"
+  - "개인정보 수집 및 이용 동의"
 optional_fields:
   - "현재 고민 1문장"
   - "녹음 동의 여부"
   - "자료 공유 가능 여부"
 implementation_notes:
-  - "Tally 폼 URL은 VITE_TALLY_FORM_URL로만 주입한다."
+  - "Tally 공개 폼 URL 또는 공개 form ID는 VITE_TALLY_FORM_URL로 주입한다."
   - "Tally API 키는 frontend에 넣지 않는다."
   - "폼 URL이 없으면 이메일 신청 fallback을 유지한다."
+  - "폼 스타일은 M2 팔레트의 warm white, deep navy, CTA orange 기준으로 맞춘다."
 ```
 
 ## FAQ Canonical Answers
@@ -387,8 +390,11 @@ files:
   app_entry: "src/App.jsx"
   content_data: "src/data/landingContent.js"
   styles: "src/App.css"
+  team_image_originals: "src/assets/images/team/originals/"
+  team_image_optimized: "src/assets/images/team/optimized/"
   agent_instructions: "AGENT.md"
 checks:
+  - "npm run images:team"
   - "npm run build"
   - "rg -n 'removed_brand_or_domain_terms' ."
   - "git diff --check"

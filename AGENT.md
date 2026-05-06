@@ -18,6 +18,8 @@ The production deployment is connected to Vercel. Pushing to `main` triggers dep
 ```bash
 npm install
 npm run dev
+npm run forms:tally:create
+npm run images:team
 npm run build
 npm run preview
 ```
@@ -44,6 +46,8 @@ The application is ready for Tally embed through:
 VITE_TALLY_FORM_URL=https://tally.so/r/your-form-id
 ```
 
+`VITE_TALLY_FORM_URL` accepts a public Tally form URL or public form ID. Do not put a private Tally API key in a committed frontend env file.
+
 Until a Tally form URL is provided, the apply section falls back to an email-based application form using:
 
 ```bash
@@ -51,6 +55,9 @@ VITE_CONTACT_EMAIL=lifedesigner88@gmail.com
 ```
 
 Do not hard-code a private Tally API key in the frontend.
+
+When creating or updating Tally forms through the API, read `TALLY_API_KEY` from ignored `.env` only.
+If `.env.production` already contains `VITE_TALLY_FORM_URL`, the form script updates that public form by default. Use `TALLY_CREATE_NEW=1 npm run forms:tally:create` only when a separate new form is intended.
 
 ## Content Constraints
 
@@ -67,3 +74,10 @@ Do not hard-code a private Tally API key in the frontend.
 - Touch targets should be at least 44px.
 - Do not create nested cards.
 - Use lucide-react icons for UI controls and trust signals.
+
+## Image Assets
+
+- Team source photos live locally in `src/assets/images/team/originals/` and are ignored by git.
+- Commit optimized web-ready files from `src/assets/images/team/optimized/`.
+- Run `npm run images:team` after replacing team originals.
+- Use real team photos before stock photos when the layout needs trust or human presence.

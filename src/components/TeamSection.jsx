@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import {
   focusItems,
   noPromiseItems,
+  teamImages,
   teamMembers,
   workPrinciples,
 } from "../data/landingContent";
@@ -23,8 +24,8 @@ export default function TeamSection() {
         <div className="team-feature">
           <Reveal className="team-photo-panel">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=80"
-              alt="노트북과 노트를 두고 교육 서비스 회의를 준비하는 장면"
+              src={teamImages.groupPortrait}
+              alt="야외에서 함께 포즈를 취한 Team 310 세 명"
               loading="lazy"
             />
           </Reveal>
@@ -45,15 +46,19 @@ export default function TeamSection() {
                 );
               })}
             </div>
+            <img
+              className="team-candid"
+              src={teamImages.seminSejongTogether}
+              alt="촬영 장비와 노트를 들고 함께 준비 중인 Team 310 팀원"
+              loading="lazy"
+            />
           </Reveal>
         </div>
 
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <Reveal className="team-card" key={member.name} delay={index * 0.04}>
-              <div className="avatar" aria-hidden="true">
-                {member.name.slice(0, 1)}
-              </div>
+              <img className="member-photo" src={member.photo} alt={member.photoAlt} loading="lazy" />
               <h3>{member.name}</h3>
               <p className="member-role">{member.role}</p>
               <p>{member.summary}</p>

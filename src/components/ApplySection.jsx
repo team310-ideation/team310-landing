@@ -5,7 +5,7 @@ import {
   applySummaryIcons,
   contactEmail,
   painPoints,
-  tallyFormUrl,
+  tallyEmbedUrl,
 } from "../data/landingContent";
 import Reveal from "./Reveal";
 
@@ -116,7 +116,7 @@ function FallbackApplyForm() {
 }
 
 export default function ApplySection() {
-  const hasTally = tallyFormUrl.trim().startsWith("https://tally.so/");
+  const hasTally = Boolean(tallyEmbedUrl);
 
   return (
     <section className="section apply-section" id="apply" aria-labelledby="apply-title">
@@ -153,7 +153,7 @@ export default function ApplySection() {
         <Reveal className="apply-panel" delay={0.05}>
           {hasTally ? (
             <iframe
-              src={tallyFormUrl}
+              src={tallyEmbedUrl}
               title="Team 310 인터뷰 신청 Tally 폼"
               loading="lazy"
               width="100%"

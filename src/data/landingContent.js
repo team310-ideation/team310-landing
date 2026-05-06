@@ -22,11 +22,63 @@ import {
   UsersRound,
   Video,
 } from "lucide-react";
+import groupPortrait from "../assets/images/team/optimized/team310-group-portrait.webp";
+import junhyeokProfile from "../assets/images/team/optimized/junhyeok-profile.webp";
+import sejongProfile from "../assets/images/team/optimized/sejong-profile.webp";
+import seminProfile from "../assets/images/team/optimized/semin-profile.webp";
+import seminSejongTogether from "../assets/images/team/optimized/semin-sejong-together.webp";
 
 export const contactEmail =
   import.meta.env.VITE_CONTACT_EMAIL || "lifedesigner88@gmail.com";
 
-export const tallyFormUrl = import.meta.env.VITE_TALLY_FORM_URL || "";
+const tallyFormReference = import.meta.env.VITE_TALLY_FORM_URL || "";
+
+function withTallyEmbedOptions(url) {
+  url.searchParams.set("hideTitle", "1");
+  url.searchParams.set("transparentBackground", "1");
+  url.searchParams.set("dynamicHeight", "1");
+  return url.toString();
+}
+
+function normalizeTallyEmbedUrl(value) {
+  const reference = value.trim();
+
+  if (!reference) {
+    return "";
+  }
+
+  try {
+    const url = new URL(reference);
+    const isTallyUrl = url.hostname === "tally.so" || url.hostname.endsWith(".tally.so");
+
+    if (!isTallyUrl) {
+      return "";
+    }
+
+    const [, pathType, formId] = url.pathname.split("/");
+
+    if (pathType === "embed" && formId) {
+      return withTallyEmbedOptions(url);
+    }
+
+    if ((pathType === "r" || pathType === "forms") && formId) {
+      return withTallyEmbedOptions(new URL(`/embed/${formId}`, "https://tally.so"));
+    }
+  } catch {
+    if (/^[A-Za-z0-9_-]+$/.test(reference)) {
+      return withTallyEmbedOptions(new URL(`/embed/${reference}`, "https://tally.so"));
+    }
+  }
+
+  return "";
+}
+
+export const tallyEmbedUrl = normalizeTallyEmbedUrl(tallyFormReference);
+
+export const teamImages = {
+  groupPortrait,
+  seminSejongTogether,
+};
 
 export const heroTopics = [
   "생기부를 어떻게 읽어야 할지",
@@ -155,6 +207,8 @@ export const teamMembers = [
   {
     name: "박세종",
     role: "Team Lead, 교육자형 개발자",
+    photo: sejongProfile,
+    photoAlt: "꽃이 핀 야외 배경 앞에 선 박세종",
     summary:
       "국제캠프 PM, 입시 데이터 3만 건 분석, 진로코칭 경험을 바탕으로 교육 맥락을 제품 언어로 옮깁니다.",
     details: ["550명+·18개국 국제캠프 운영", "입시 컨설팅·진로코칭", "48명 교육 서비스 사용자 검증"],
@@ -162,6 +216,8 @@ export const teamMembers = [
   {
     name: "박준혁",
     role: "AI & Data, 사용자 맥락 연구",
+    photo: junhyeokProfile,
+    photoAlt: "계단에 앉아 웃고 있는 박준혁",
     summary:
       "기술을 먼저 과시하기보다 학부모와 학생의 실제 발화를 데이터 구조로 읽는 역할을 맡고 있습니다.",
     details: ["알고리즘 역량", "인류학적 현장 조사 관점", "LLM 기반 문제 구조화"],
@@ -169,6 +225,8 @@ export const teamMembers = [
   {
     name: "박세민",
     role: "PM & Backend, 사용자 검증",
+    photo: seminProfile,
+    photoAlt: "야외 산책로에서 카메라를 바라보는 박세민",
     summary:
       "실제 사용자가 모이는 커뮤니티와 제품 검증 경험을 바탕으로 인터뷰와 실행 사이를 연결합니다.",
     details: ["KOPLE 2,700명 운영", "LOI 기반 시장 검증", "기획·개발·검증 통합"],
