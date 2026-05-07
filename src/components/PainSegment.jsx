@@ -17,10 +17,6 @@ export default function PainSegment() {
         <Reveal className="section-intro">
           <p className="eyebrow">중3 엄마의 고민</p>
           <h2 id="pain-title">혹시 이런 마음으로 검색하고 계셨나요?</h2>
-          <p>
-            정답을 단정하기 전에, 학부모님이 실제로 막히는 장면을 먼저 듣고
-            싶습니다.
-          </p>
         </Reveal>
 
         <Reveal className="pain-layout" delay={0.04}>
