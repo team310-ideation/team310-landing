@@ -15,11 +15,11 @@ export default function PainSegment() {
     <section className="section surface-section" id="pain" aria-labelledby="pain-title">
       <div className="container">
         <Reveal className="section-intro">
-          <p className="eyebrow">Pain match</p>
-          <h2 id="pain-title">어떤 고민에 가장 가까우신가요?</h2>
+          <p className="eyebrow">중3 엄마의 고민</p>
+          <h2 id="pain-title">혹시 이런 마음으로 검색하고 계셨나요?</h2>
           <p>
-            다섯 가지 문제를 모두 듣되, 첫 화면의 중심은 아이 기록·예비고1·담임상담
-            준비에 둡니다.
+            정답을 단정하기 전에, 학부모님이 실제로 막히는 장면을 먼저 듣고
+            싶습니다.
           </p>
         </Reveal>
 
@@ -63,14 +63,14 @@ export default function PainSegment() {
                 <h3>{active.title}</h3>
                 <blockquote>{active.quote}</blockquote>
                 <p>{active.summary}</p>
-                <h4>인터뷰에서 듣고 싶은 것</h4>
+                <h4>50분 동안 함께 정리할 이야기</h4>
                 <ul className="check-list">
                   {active.wants.map((want) => (
                     <li key={want}>{want}</li>
                   ))}
                 </ul>
                 <ApplyLink className="text-link">
-                  이 고민으로 인터뷰 신청하기
+                  이 고민을 이야기하고 싶어요
                   <ArrowRight size={18} aria-hidden="true" />
                 </ApplyLink>
               </div>

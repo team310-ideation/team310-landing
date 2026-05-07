@@ -8,7 +8,7 @@ export default function TeamVideoSection() {
       <div className="container">
         <Reveal className="section-intro">
           <p className="eyebrow">Team 310 video</p>
-          <h2 id="videos-title">Team 310의 문제해결 과정을 영상으로 남기고 있습니다</h2>
+          <h2 id="videos-title">인터뷰 이후 우리가 어떻게 배우고 움직이는지 남기고 있습니다</h2>
         </Reveal>
 
         <div className="video-grid">

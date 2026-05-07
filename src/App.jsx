@@ -20,25 +20,25 @@ export default function App() {
       <main>
         <Hero />
 
-        <MissionSection />
         <PainSegment />
         <InterviewProcess />
         <TeamSection />
-        <TeamVideoSection />
+        <MissionSection />
         <TrustSection />
         <ApplySection />
         <FaqSection />
+        <TeamVideoSection />
 
         <section className="closing-section" aria-labelledby="closing-title">
           <div className="container closing-content">
             <p className="eyebrow">Team 310 interview</p>
-            <h2 id="closing-title">당신의 고민이 제품의 방향이 됩니다</h2>
+            <h2 id="closing-title">엄마의 한 문장이 제품의 출발점이 됩니다</h2>
             <p>
-              더 많은 정보가 아니라, 내 아이의 누적된 맥락을 읽고 지금 무엇을 우선해야
-              하는지 아는 경험을 만들고 있습니다.
+              더 많은 정보를 얹기보다, 내 아이의 누적된 맥락을 읽고 지금 무엇을
+              질문해야 하는지 함께 정리하는 경험을 만들고 있습니다.
             </p>
             <ApplyLink className="button primary-button">
-              인터뷰 신청하기
+              내 고민으로 인터뷰 신청하기
               <ArrowRight size={20} aria-hidden="true" />
             </ApplyLink>
           </div>
@@ -54,7 +54,7 @@ export default function App() {
               <span className="brand-mark">310</span>
               <span>Team 310</span>
             </span>
-            <p>학부모·학생 50분 인터뷰 모집</p>
+            <p>중3·예비고1 학부모 50분 인터뷰 모집</p>
           </div>
           <div>
             <h2>문의</h2>

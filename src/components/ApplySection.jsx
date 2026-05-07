@@ -21,10 +21,10 @@ const defaultFormState = {
 };
 
 function buildMailto(formState) {
-  const subject = encodeURIComponent("[Team 310] 50분 인터뷰 신청");
+  const subject = encodeURIComponent("[Team 310] 학부모 50분 인터뷰 신청");
   const body = encodeURIComponent(
     [
-      "Team 310 인터뷰 신청",
+      "Team 310 학부모 인터뷰 신청",
       "",
       `이름: ${formState.name || "(작성 전)"}`,
       `연락처: ${formState.contact || "(작성 전)"}`,
@@ -33,7 +33,7 @@ function buildMailto(formState) {
       `가장 가까운 고민: ${formState.concern}`,
       `편한 시간대: ${formState.time || "(작성 전)"}`,
       "",
-      "현재 고민:",
+      "요즘 가장 마음에 걸리는 고민:",
       formState.note || "(작성 전)",
     ].join("\n"),
   );
@@ -100,11 +100,11 @@ function FallbackApplyForm() {
         </label>
       </div>
       <label>
-        현재 고민 한 문장
+        요즘 가장 마음에 걸리는 고민 한 문장
         <textarea
           value={formState.note}
           onChange={updateField("note")}
-          placeholder="예: 예비고1인데 첫 학기 준비 방향이 막막합니다."
+          placeholder="예: 중3인데 생기부를 봐도 무엇부터 준비해야 할지 막막합니다."
           rows="4"
         />
       </label>
@@ -124,16 +124,16 @@ function TallyApplyCard() {
       </div>
       <h3>Tally 신청 폼으로 이동합니다</h3>
       <p>
-        새 창에서 신청서를 작성하면 Team 310이 확인 후 가능한 시간대를 조율해
-        연락드립니다.
+        편한 시간대와 가장 가까운 고민을 남겨주시면 Team 310이 확인 후
+        가능한 일정을 조율해 연락드립니다.
       </p>
       <a className="button primary-button" href={tallyPublicUrl} target="_blank" rel="noreferrer">
-        Tally에서 신청하기
+        신청 폼 열기
         <ExternalLink size={19} aria-hidden="true" />
       </a>
       <div className="tally-link-meta">
-        <span>자료 업로드 필수 아님</span>
-        <span>녹음은 동의 시에만</span>
+        <span>학부모님 혼자 가능</span>
+        <span>자료 업로드 선택</span>
         <span>응답 후 일정 조율</span>
       </div>
     </div>
@@ -148,7 +148,11 @@ export default function ApplySection() {
       <div className="container apply-layout">
         <Reveal className="apply-copy">
           <p className="eyebrow">Apply</p>
-          <h2 id="apply-title">50분 인터뷰를 신청해 주세요</h2>
+          <h2 id="apply-title">가장 가까운 고민으로 50분 인터뷰를 신청해 주세요</h2>
+          <p>
+            완벽하게 정리해서 오지 않아도 괜찮습니다. 지금 가장 마음에 걸리는
+            장면 한 가지면 충분합니다.
+          </p>
 
           <div className="apply-summary">
             {applyFields.map((field, index) => {

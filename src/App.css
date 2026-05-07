@@ -712,12 +712,7 @@ img {
 
 .team-video-section .section-intro h2 {
   font-size: clamp(26px, 3vw, 34px);
-}
-
-@media (min-width: 981px) {
-  .team-video-section .section-intro h2 {
-    white-space: nowrap;
-  }
+  text-wrap: balance;
 }
 
 .video-grid {

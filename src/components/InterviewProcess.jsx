@@ -9,7 +9,11 @@ export default function InterviewProcess() {
       <div className="container">
         <Reveal className="section-intro">
           <p className="eyebrow">50-minute interview</p>
-          <h2 id="interview-title">인터뷰는 부담 없이, 필요한 만큼만 진행합니다</h2>
+          <h2 id="interview-title">상담이 아니라, 엄마의 상황을 정확히 듣는 시간입니다</h2>
+          <p>
+            아이 자료가 없어도 괜찮습니다. 지금 가장 마음에 걸리는 장면부터
+            이야기해 주세요.
+          </p>
         </Reveal>
 
         <div className="process-grid">
@@ -41,10 +45,10 @@ export default function InterviewProcess() {
         <Reveal className="inline-cta" delay={0.12}>
           <div>
             <strong>불편한 질문은 답하지 않아도 됩니다.</strong>
-            <span>인터뷰 내용은 비식별화 후 기획 검증에만 사용합니다.</span>
+            <span>자료 공유와 녹음은 동의한 경우에만 진행하고, 내용은 기획 검증에만 사용합니다.</span>
           </div>
           <ApplyLink className="button secondary-button">
-            신청 카드 보기
+            신청 방법 보기
             <ArrowRight size={19} aria-hidden="true" />
           </ApplyLink>
         </Reveal>

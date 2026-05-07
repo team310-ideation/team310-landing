@@ -3,12 +3,12 @@ import { useState } from "react";
 import ApplyLink from "./ApplyLink";
 
 const navItems = [
-  { label: "미션", href: "#mission" },
-  { label: "고민 선택", href: "#pain" },
+  { label: "엄마의 고민", href: "#pain" },
   { label: "인터뷰 방식", href: "#interview" },
-  { label: "팀소개", href: "#team" },
-  { label: "팀영상", href: "#videos" },
+  { label: "함께 듣는 팀", href: "#team" },
+  { label: "AI 활용", href: "#mission" },
   { label: "안심 정보", href: "#trust" },
+  { label: "팀영상", href: "#videos" },
 ];
 
 export default function Header() {

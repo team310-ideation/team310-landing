@@ -15,8 +15,8 @@ const faviconSvg = `<?xml version="1.0" encoding="UTF-8"?>
 
 const ogSvg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Team 310 학부모·학생 인터뷰 모집</title>
-  <desc id="desc">학부모의 입시 고민을 듣고 AI로 맥락을 정리하는 Team 310 오픈그래프 이미지</desc>
+  <title id="title">엄마의 고민, Team 310이 듣습니다</title>
+  <desc id="desc">중3·예비고1 학부모의 입시 고민을 듣고 AI로 맥락을 정리하는 Team 310 오픈그래프 이미지</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFFDF9"/>
@@ -44,25 +44,25 @@ const ogSvg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <g transform="translate(94 258)">
     <text x="0" y="0" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="60" font-weight="900" fill="#102035">아이 입시 고민,</text>
+      font-size="60" font-weight="900" fill="#102035">엄마의 고민,</text>
     <text x="0" y="76" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="60" font-weight="900" fill="#102035">50분만 들려주세요</text>
+      font-size="60" font-weight="900" fill="#102035">Team 310이 듣습니다</text>
     <text x="0" y="128" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="26" font-weight="700" fill="#4A5565">Team 310이 학부모님의 이야기를 듣고</text>
+      font-size="26" font-weight="700" fill="#4A5565">생기부·예비고1·담임 상담 전</text>
     <text x="0" y="166" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="26" font-weight="700" fill="#4A5565">AI로 생기부·상담·진로 맥락을 함께 정리합니다</text>
+      font-size="26" font-weight="700" fill="#4A5565">막막한 장면부터 50분 동안 듣습니다</text>
   </g>
 
   <g transform="translate(92 502)">
     <rect width="178" height="48" rx="14" fill="#F97316"/>
     <text x="89" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="19" font-weight="900" fill="#FFFFFF">50분 인터뷰</text>
+      font-size="19" font-weight="900" fill="#FFFFFF">중3·예비고1</text>
     <rect x="194" width="212" height="48" rx="14" fill="#EEF6F0"/>
     <text x="300" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
       font-size="19" font-weight="900" fill="#4A7C59">자료 업로드 선택</text>
     <rect x="422" width="246" height="48" rx="14" fill="#EFF6FF"/>
     <text x="545" y="31" text-anchor="middle" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="19" font-weight="900" fill="#1D4ED8">Tally에서 신청</text>
+      font-size="19" font-weight="900" fill="#1D4ED8">상담 판매 아님</text>
   </g>
 
   <g transform="translate(744 136)">

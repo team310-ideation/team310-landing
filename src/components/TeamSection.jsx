@@ -6,11 +6,11 @@ export default function TeamSection() {
     <section className="section team-section" id="team" aria-labelledby="team-title">
       <div className="container">
         <Reveal className="section-intro">
-          <p className="eyebrow">Why Team 310</p>
-          <h2 id="team-title">정보보다 맥락을 먼저 보는 팀입니다</h2>
+          <p className="eyebrow">함께 듣는 팀</p>
+          <h2 id="team-title">선발 이력보다 먼저, 엄마의 말을 놓치지 않겠습니다</h2>
           <p>
-            AI·SW마에스트로 17기 선발 과정을 통과한 세 명이 교육 현장, AI·Data,
-            사용자 검증 경험을 모아 학부모와 학생의 실제 고민을 작게 검증하고 있습니다.
+            AI·SW마에스트로 17기 선발 과정을 통과한 세 명이지만, 첫 순서는
+            기술 설명이 아니라 학부모님이 실제로 겪는 막막함을 듣는 것입니다.
           </p>
         </Reveal>
 
@@ -24,7 +24,7 @@ export default function TeamSection() {
           </Reveal>
 
           <Reveal className="principle-panel" delay={0.04}>
-            <h3>우리는 이렇게 일합니다</h3>
+            <h3>우리는 이렇게 듣습니다</h3>
             <div className="principle-list">
               {workPrinciples.map((item) => {
                 const Icon = item.icon;
