@@ -8,10 +8,6 @@ export default function TeamSection() {
         <Reveal className="section-intro">
           <p className="eyebrow">함께 듣는 팀</p>
           <h2 id="team-title">선발 이력보다 먼저, 엄마의 말을 놓치지 않겠습니다</h2>
-          <p>
-            AI·SW마에스트로 17기 선발 과정을 통과한 세 명이지만, 첫 순서는
-            기술 설명이 아니라 학부모님이 실제로 겪는 막막함을 듣는 것입니다.
-          </p>
         </Reveal>
 
         <div className="team-feature">
