@@ -11,7 +11,7 @@ if (!apiKey) {
 }
 
 const API_URL = "https://api.tally.so/forms";
-const title = "엄마의 고민, 팀 310이 듣습니다.";
+const title = "엄마의 고민, Team 310이 듣습니다.";
 const shouldCreateNew = process.env.TALLY_CREATE_NEW === "1" || env.TALLY_CREATE_NEW === "1";
 const existingFormId =
   shouldCreateNew
@@ -185,7 +185,7 @@ function checkboxQuestion({ title: question, options, isRequired = false }) {
 }
 
 const blocks = [
-  formTitle('<span style="color: #102035"><b>엄마의 고민, 팀 310이 듣습니다.</b></span>'),
+  formTitle('<span style="color: #102035"><b>엄마의 고민, Team 310이 듣습니다.</b></span>'),
   text(
     "중3·예비고1 전환기에서 생기부, 첫 시험, 담임 상담, 사교육 결정이 막막한 학부모님의 이야기를 듣습니다.",
   ),

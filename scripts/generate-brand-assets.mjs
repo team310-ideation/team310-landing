@@ -15,7 +15,7 @@ const faviconSvg = `<?xml version="1.0" encoding="UTF-8"?>
 
 const ogSvg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">엄마의 고민, 팀 310이 듣습니다.</title>
+  <title id="title">엄마의 고민, Team 310이 듣습니다.</title>
   <desc id="desc">중3·예비고1 학부모의 입시 고민을 듣고 AI로 맥락을 정리하는 Team 310 오픈그래프 이미지</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -44,9 +44,9 @@ const ogSvg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <g transform="translate(94 258)">
     <text x="0" y="0" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="60" font-weight="900" fill="#102035">엄마의 고민,</text>
+      font-size="60" font-weight="900" fill="#102035">엄마의 고민, Team</text>
     <text x="0" y="76" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
-      font-size="60" font-weight="900" fill="#102035">팀 310이 듣습니다.</text>
+      font-size="60" font-weight="900" fill="#102035">310이 듣습니다.</text>
     <text x="0" y="128" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
       font-size="26" font-weight="700" fill="#4A5565">생기부·예비고1·담임 상담 전</text>
     <text x="0" y="166" font-family="Pretendard, Noto Sans CJK KR, Arial, sans-serif"
