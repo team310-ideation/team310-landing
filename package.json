@@ -8,6 +8,7 @@
     "build": "vite build",
     "assets:brand": "node scripts/generate-brand-assets.mjs",
     "forms:tally:create": "node scripts/create-tally-interview-form.mjs",
+    "images:mentors": "node scripts/prepare-mentor-images.mjs",
     "images:team": "node scripts/prepare-team-images.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },

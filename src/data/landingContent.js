@@ -24,6 +24,9 @@ import junhyeokProfile from "../assets/images/team/optimized/junhyeok-profile.we
 import sejongProfile from "../assets/images/team/optimized/sejong-profile.webp";
 import seminProfile from "../assets/images/team/optimized/semin-profile.webp";
 import seminSejongTogether from "../assets/images/team/optimized/semin-sejong-together.webp";
+import jaehongMentor from "../assets/images/mentors/optimized/mentor-jaehong.webp";
+import sehwanMentor from "../assets/images/mentors/optimized/mentor-sehwan.webp";
+import soonyupMentor from "../assets/images/mentors/optimized/mentor-soonyup.webp";
 import mjuLogo from "../assets/images/schools/mju-logo.gif";
 import snuLogo from "../assets/images/schools/snu-logo.png";
 import uosLogo from "../assets/images/schools/uos-logo.png";
@@ -348,43 +351,76 @@ export const trustItems = [
 export const mentorProfiles = [
   {
     name: "고세환",
-    status: "확정",
-    role: "공식 담당 멘토",
+    status: "담당 멘토",
+    role: "기술·서비스·전략 자문",
     context: "KIST 정보보안/DX/AX 전략 총괄",
-    highlights: ["KIST 정보보안·DX·AX", "CISSP·CPPG", "창업 4회 경험"],
-    details: [
+    photo: sehwanMentor,
+    photoAlt: "정장을 입고 서 있는 고세환 멘토",
+    summary:
+      "문제정의, 개인정보·보안, 정부지원사업 전략까지 서비스가 실제 운영될 때 필요한 기준을 함께 점검합니다.",
+    highlights: ["KIST DX·AX", "정보보안·개인정보", "창업 4회 경험"],
+    career: [
+      "한국과학기술연구원(KIST) 정보보안/DX/AX 전략 총괄 (2013~)",
+      "KT 보안컨설팅·네트워크 보안관제 (2010~2013)",
+      "메일북 그룹웨어 개발 (2005~2006)",
+      "빅풀 보드게임 개발 (2004~2005)",
+    ],
+    activities: [
+      "CISSP 국제정보보안전문가",
+      "CPPG 개인정보보호전문가",
       "KT 보안컨설팅·네트워크 보안관제 경험",
       "정부지원사업·기획심의·TIPS 전략 멘토링",
-      "개인정보·보안·서비스 운영 리스크 점검",
       "VC 네트워크 연결과 피칭 코칭 지원",
     ],
   },
   {
     name: "조재홍",
-    status: "확정",
-    role: "기술·창업 멘토",
-    context: "삼성전자 AI플랫폼센터, 에듀테크 CTO 경험",
-    highlights: ["삼성전자 AI플랫폼센터", "모바일·IoT 20년+", "10만 다운로드 서비스"],
-    details: [
-      "삼성리서치·무선사업부 기반 모바일·SmartThings 경험",
-      "에듀테크 필로토 CTO로 앱·서버 개발과 운영",
-      "데이터 수집·분석 기반 제품 개선 경험",
-      "AI·SW마에스트로 다수 팀 MVP·출시 멘토링",
+    status: "기술 멘토",
+    role: "AI·IoT·에듀테크 자문",
+    context: "삼성전자 AI플랫폼센터",
+    photo: jaehongMentor,
+    photoAlt: "민트색 배경 앞에서 웃고 있는 조재홍 멘토",
+    summary:
+      "대기업 AI·IoT 플랫폼과 에듀테크 스타트업 운영 경험을 바탕으로, 아이디어가 실제 사용자에게 닿는 과정을 함께 점검합니다.",
+    highlights: ["삼성전자 AI플랫폼센터", "SmartThings", "에듀테크 운영"],
+    career: [
+      "삼성전자 AI플랫폼센터 (2024.11~현재) - AI 기반 업무 혁신(AX) 전략 수립 및 기술 리딩",
+      "삼성전자 AI플랫폼센터 (2024.11~현재) - IoT 플랫폼 전략 기획 및 SmartThings 상품화 개발 관리",
+      "필로토 (2022.6~2024.5) - 타키 서비스 개발 총괄 및 운영, 사용자 데이터 수집·분석",
+      "삼성전자 삼성리서치 (2015.3~2022.5) - IoT 오픈소스 개발 Tech Leader, SmartThings 상품화",
+      "삼성전자 무선사업부 (2006.12~2015.2) - 갤럭시 Launcher·Widget·Message, Gear VR Gallery·Video App 개발",
+    ],
+    activities: [
+      "AI·SW 마에스트로 기술멘토 (2024~)",
+      "창업진흥원 평가위원 (2024~)",
+      "한국교육학술정보원 디지털교과서 전문위원 (2023)",
     ],
   },
   {
     name: "홍순엽",
-    status: "추가 협의 예정",
-    role: "VC 비기술 멘토",
+    status: "VC 자문",
+    role: "투자·사업화 자문",
     context: "모비딕벤처스 벤처투자팀",
+    photo: soonyupMentor,
+    photoAlt: "팔짱을 끼고 있는 홍순엽 멘토",
+    summary:
+      "투자자와 정부 심사위원의 관점으로 문제정의, 시장성, 기획심의 자료의 설득력을 함께 확인합니다.",
     highlights: ["딥테크·ICT·SW 투자", "TIPS·POST-TIPS", "BM·피칭 전략"],
-    details: [
-      "예비·초기창업패키지, 도전 K-스타트업 심사·평가 경험",
+    career: [
+      "모비딕벤처스 벤처투자팀 팀장 - 딥테크·ICT·SW 투자",
+      "초기 단계 투자 검토와 후속 투자 유치 지원",
+      "기업가치 2,500억원 규모 성장 사례 지원",
+      "SW 기반 스타트업 TIPS 선정 지원",
+    ],
+    activities: [
+      "도전 K-스타트업 발표평가 선정위원",
+      "TIPS·POST-TIPS 심사위원",
+      "예비·초기창업패키지 서류평가 위원",
+      "청년창업사관학교·대학 창업경진대회 평가위원",
       "전자공학 기반 기술 사업성 검토 관점",
       "기술거래사·기술신용평가사(TCB) 기반 검증",
-      "투자 유치 로드맵과 기획심의 전략 자문 예정",
+      "투자 유치 로드맵과 기획심의 전략 자문",
     ],
-    pending: true,
   },
 ];
 

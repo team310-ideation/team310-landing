@@ -35,7 +35,7 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.04, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          <span>엄마의 고민, Team</span>
+          <span>엄마의 고민, TEAM</span>
           <span>310이 듣습니다.</span>
         </motion.h1>
 

@@ -7,7 +7,7 @@ const navItems = [
   { label: "인터뷰 방식", href: "#interview" },
   { label: "함께 듣는 팀", href: "#team" },
   { label: "AI 활용", href: "#mission" },
-  { label: "안심 정보", href: "#trust" },
+  { label: "자문 멘토", href: "#trust" },
   { label: "팀영상", href: "#videos" },
 ];
 
