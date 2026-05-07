@@ -6,6 +6,7 @@
 src/assets/images/mentors/originals/mentor-sehwan-original.png  # 고세환 멘토
 src/assets/images/mentors/originals/mentor-jaehong-original.jpg # 조재홍 멘토
 src/assets/images/mentors/originals/mentor-soonyup-original.png # 홍순엽 멘토
+src/assets/images/mentors/originals/mentor-dongin-original.jpg  # 조동인 멘토
 ```
 
 권장 비율은 정사각형 또는 세로형입니다.

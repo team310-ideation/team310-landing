@@ -305,7 +305,7 @@ mentor_profiles:
   - name: "고세환"
     status: "확정"
     role: "공식 담당 멘토"
-    context: "KIST 정보보안/DX/AX 전략 총괄"
+    context: "KIST AX, DX, IT 인프라 및 정보보안 체계를 총괄"
     highlights:
       - "KIST 정보보안·DX·AX"
       - "CISSP·CPPG"

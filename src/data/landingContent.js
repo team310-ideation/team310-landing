@@ -24,6 +24,7 @@ import junhyeokProfile from "../assets/images/team/optimized/junhyeok-profile.we
 import sejongProfile from "../assets/images/team/optimized/sejong-profile.webp";
 import seminProfile from "../assets/images/team/optimized/semin-profile.webp";
 import seminSejongTogether from "../assets/images/team/optimized/semin-sejong-together.webp";
+import donginMentor from "../assets/images/mentors/optimized/mentor-dongin.webp";
 import jaehongMentor from "../assets/images/mentors/optimized/mentor-jaehong.webp";
 import sehwanMentor from "../assets/images/mentors/optimized/mentor-sehwan.webp";
 import soonyupMentor from "../assets/images/mentors/optimized/mentor-soonyup.webp";
@@ -353,14 +354,14 @@ export const mentorProfiles = [
     name: "고세환",
     status: "담당 멘토",
     role: "기술·서비스·전략 자문",
-    context: "KIST 정보보안/DX/AX 전략 총괄",
+    context: "KIST AX, DX, IT 인프라 및 정보보안 체계를 총괄",
     photo: sehwanMentor,
     photoAlt: "정장을 입고 서 있는 고세환 멘토",
     summary:
       "문제정의, 개인정보·보안, 정부지원사업 전략까지 서비스가 실제 운영될 때 필요한 기준을 함께 점검합니다.",
     highlights: ["KIST DX·AX", "정보보안·개인정보", "창업 4회 경험"],
     career: [
-      "한국과학기술연구원(KIST) 정보보안/DX/AX 전략 총괄 (2013~)",
+      "한국과학기술연구원(KIST) AX, DX, IT 인프라 및 정보보안 체계를 총괄 (2013~)",
       "KT 보안컨설팅·네트워크 보안관제 (2010~2013)",
       "메일북 그룹웨어 개발 (2005~2006)",
       "빅풀 보드게임 개발 (2004~2005)",
@@ -397,6 +398,32 @@ export const mentorProfiles = [
     ],
   },
   {
+    name: "조동인",
+    status: "비기술 멘토",
+    role: "창업·고객개발·사업화 자문",
+    context: "스프러너 대표",
+    photo: donginMentor,
+    photoAlt: "흰 배경 앞에서 웃고 있는 조동인 멘토",
+    summary:
+      "10,000명 이상의 창업가 교육과 200개 이상의 스타트업 육성 경험을 바탕으로, 문제-해결 적합성과 초기 시장 진입 전략을 함께 점검합니다.",
+    highlights: ["창업가 10,000명+ 교육", "스타트업 200개+ 육성", "PSF·린 스타트업"],
+    career: [
+      "주식회사 스프러너 대표 - 극초기 기술 기반 스타트업 액셀러레이팅",
+      "AI·SW마에스트로 멘토 - 아이디에이션, 고객 개발, 비즈니스 모델 자문",
+      "행정안전부 지방자치단체 합동평가단 前 위원",
+      "국무총리 직속 청년정책조정위원회 前 위원",
+      "교육부 미래교육위원회 前 위원",
+    ],
+    activities: [
+      "2013년부터 창업가 10,000명+ 교육",
+      "2018년부터 스타트업 200개+ 육성",
+      "그로스허브·코파운더 프로그램 총괄",
+      "문제-해결 적합성(PSF), MVP, 고객 인터뷰 설계 멘토링",
+      "IR·펀드레이징 관점의 피칭 논리 구조화",
+      "기업가정신 확산 및 진흥 유공 중소벤처기업부장관 표창",
+    ],
+  },
+  {
     name: "홍순엽",
     status: "VC 자문",
     role: "투자·사업화 자문",
@@ -426,6 +453,7 @@ export const mentorProfiles = [
 
 export const mentorSignals = [
   "기술·제품 검토",
+  "고객·시장 검증",
   "개인정보·운영 리스크 점검",
   "문제정의 피드백",
 ];

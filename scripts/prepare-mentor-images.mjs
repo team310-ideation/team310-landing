@@ -6,6 +6,13 @@ const outputDir = "src/assets/images/mentors/optimized";
 
 const jobs = [
   {
+    input: "mentor-dongin-original.jpg",
+    output: "mentor-dongin.webp",
+    width: 840,
+    height: 980,
+    extract: { left: 149, top: 110, width: 2100, height: 2450 },
+  },
+  {
     input: "mentor-sehwan-original.png",
     output: "mentor-sehwan.webp",
     width: 840,
