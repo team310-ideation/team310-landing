@@ -81,7 +81,7 @@ export default function OfflineLocationSection() {
             {offlineLocation.title}
           </span>
           <h3 id="offline-location-title">{offlineLocation.name}</h3>
-          <p>{offlineLocation.note}</p>
+          {offlineLocation.note ? <p>{offlineLocation.note}</p> : null}
 
           <dl className="location-detail-list">
             <div>

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowRight, Gift, ShieldCheck, TimerReset } from "lucide-react";
+import { ArrowDown, ArrowRight, CircleDollarSign, ShieldCheck, TimerReset } from "lucide-react";
 import { useEffect, useState } from "react";
 import { heroTopics, heroTrustItems, quickFacts } from "../data/landingContent";
 import ApplyLink from "./ApplyLink";
@@ -35,7 +35,8 @@ export default function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.04, ease: [0.2, 0.8, 0.2, 1] }}
         >
-          엄마의 고민, Team 310이 듣습니다.
+          <span>엄마의 고민,</span>
+          <span>팀 310이 듣습니다.</span>
         </motion.h1>
 
         <motion.div
@@ -68,9 +69,6 @@ export default function Hero() {
         >
           AI·SW마에스트로 17기 선발 청년들이 중3 학부모님의 생기부,
           예비고1 첫 90일, 담임 상담 전 고민을 먼저 듣습니다.
-          <br />
-          상담을 판매하려는 자리가 아니라, 내 아이 기준의 다음 질문을 함께
-          이해하기 위한 인터뷰입니다.
         </motion.p>
 
         <motion.div
@@ -132,8 +130,8 @@ export default function Hero() {
           자료 선택
         </span>
         <span>
-          <Gift size={17} aria-hidden="true" />
-          문화상품권
+          <CircleDollarSign size={17} aria-hidden="true" />
+          무료 상담
         </span>
       </div>
     </section>

@@ -9,10 +9,6 @@ export default function MissionSection() {
         <Reveal className="section-intro">
           <p className="eyebrow">AI for parents</p>
           <h2 id="mission-title">AI는 엄마의 고민을 정리하기 위한 도구입니다</h2>
-          <p>
-            기술을 앞세우기보다, 내 아이의 누적된 맥락을 놓치지 않도록 돕는
-            방향으로 검증하고 있습니다.
-          </p>
         </Reveal>
 
         <div className="mission-grid">

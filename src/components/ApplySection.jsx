@@ -123,10 +123,6 @@ function TallyApplyCard() {
         <ExternalLink size={26} aria-hidden="true" />
       </div>
       <h3>Tally 신청 폼으로 이동합니다</h3>
-      <p>
-        편한 시간대와 가장 가까운 고민을 남겨주시면 Team 310이 확인 후
-        가능한 일정을 조율해 연락드립니다.
-      </p>
       <a className="button primary-button" href={tallyPublicUrl} target="_blank" rel="noreferrer">
         신청 폼 열기
         <ExternalLink size={19} aria-hidden="true" />
@@ -134,7 +130,7 @@ function TallyApplyCard() {
       <div className="tally-link-meta">
         <span>학부모님 혼자 가능</span>
         <span>자료 업로드 선택</span>
-        <span>응답 후 일정 조율</span>
+        <span>무료 상담</span>
       </div>
     </div>
   );
@@ -149,10 +145,6 @@ export default function ApplySection() {
         <Reveal className="apply-copy">
           <p className="eyebrow">Apply</p>
           <h2 id="apply-title">가장 가까운 고민으로 50분 인터뷰를 신청해 주세요</h2>
-          <p>
-            완벽하게 정리해서 오지 않아도 괜찮습니다. 지금 가장 마음에 걸리는
-            장면 한 가지면 충분합니다.
-          </p>
 
           <div className="apply-summary">
             {applyFields.map((field, index) => {

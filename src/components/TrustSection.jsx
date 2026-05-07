@@ -8,10 +8,6 @@ export default function TrustSection() {
         <Reveal className="section-intro">
           <p className="eyebrow">안심 정보</p>
           <h2 id="trust-title">믿고 이야기할 수 있도록 약속을 먼저 보여드립니다</h2>
-          <p>
-            인터뷰는 학부모님의 민감한 고민을 다루기 때문에, 선발 이력보다
-            진행 원칙과 개인정보 기준을 더 분명히 설명합니다.
-          </p>
         </Reveal>
 
         <div className="trust-grid">

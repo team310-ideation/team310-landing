@@ -209,6 +209,10 @@ img {
   text-wrap: balance;
 }
 
+.hero-section h1 span {
+  display: block;
+}
+
 .hero-rotator {
   display: flex;
   min-height: 58px;
@@ -376,7 +380,8 @@ img {
 }
 
 .section-intro {
-  max-width: 720px;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 38px;
 }
 
@@ -387,11 +392,13 @@ img {
   color: var(--deep-navy);
   font-size: clamp(26px, 3.8vw, 36px);
   line-height: 1.35;
+  text-wrap: balance;
 }
 
 .section-intro p:not(.eyebrow),
 .apply-copy p,
 .closing-section p {
+  max-width: 760px;
   margin: 14px 0 0;
   color: var(--text-secondary);
   font-size: 17px;
@@ -1431,7 +1438,7 @@ img {
 }
 
 .closing-content {
-  max-width: 760px;
+  max-width: 1040px;
 }
 
 .closing-section .eyebrow {
@@ -1443,6 +1450,7 @@ img {
 }
 
 .closing-section p {
+  max-width: 1040px;
   color: rgba(255, 255, 255, 0.82);
   margin-bottom: 28px;
 }

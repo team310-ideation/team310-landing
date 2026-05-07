@@ -11,9 +11,10 @@ if (!apiKey) {
 }
 
 const API_URL = "https://api.tally.so/forms";
-const title = "Team 310 50분 인터뷰 신청";
+const title = "엄마의 고민, 팀 310이 듣습니다.";
+const shouldCreateNew = process.env.TALLY_CREATE_NEW === "1" || env.TALLY_CREATE_NEW === "1";
 const existingFormId =
-  process.env.TALLY_CREATE_NEW === "1"
+  shouldCreateNew
     ? ""
     : process.env.TALLY_FORM_ID ||
       env.TALLY_FORM_ID ||
@@ -74,7 +75,7 @@ function formTitle(html) {
     title,
     html,
     button: {
-      label: "50분 인터뷰 신청하기",
+      label: "무료 상담 인터뷰 신청하기",
     },
   });
 }
@@ -184,11 +185,11 @@ function checkboxQuestion({ title: question, options, isRequired = false }) {
 }
 
 const blocks = [
-  formTitle('<span style="color: #102035"><b>Team 310 50분 인터뷰 신청</b></span>'),
+  formTitle('<span style="color: #102035"><b>엄마의 고민, 팀 310이 듣습니다.</b></span>'),
   text(
-    "학부모님이 편하게 이야기하실 수 있도록 필요한 정보만 받습니다. 응답 후 가능한 시간대를 조율해 Team 310이 직접 연락드립니다.",
+    "중3·예비고1 전환기에서 생기부, 첫 시험, 담임 상담, 사교육 결정이 막막한 학부모님의 이야기를 듣습니다.",
   ),
-  text("자료 업로드는 필수가 아니며, 녹음은 동의한 경우에만 진행합니다."),
+  text("무료 상담 인터뷰이며, 자료 업로드는 선택입니다. 녹음은 동의한 경우에만 진행합니다."),
   divider(),
   ...inputQuestion({
     title: "이름",
@@ -201,25 +202,30 @@ const blocks = [
     isRequired: true,
   }),
   ...dropdownQuestion({
-    title: "인터뷰 대상",
+    title: "어떤 상황에 가장 가까우신가요?",
     isRequired: true,
-    options: ["학부모", "학생", "교육기관 관계자", "기타"],
+    options: ["중3 학부모", "예비고1 학부모", "고1 학부모", "학생", "교육기관 관계자", "기타"],
   }),
   ...inputQuestion({
-    title: "자녀 또는 본인 학년",
-    placeholder: "예: 중3, 예비고1, 고1",
+    title: "자녀 또는 본인의 학년",
+    placeholder: "예: 중3, 예비고1, 고1, 기타",
     isRequired: true,
   }),
   ...checkboxQuestion({
-    title: "가장 가까운 고민을 선택해 주세요",
+    title: "요즘 가장 마음에 걸리는 고민을 선택해 주세요",
     isRequired: true,
     options: [
-      "아이 생기부·성적을 어떻게 읽어야 할지 모르겠어요",
-      "예비고1 첫 90일 준비가 막막해요",
-      "담임·진로 상담 전에 뭘 물어봐야 할지 모르겠어요",
-      "상담 비용과 개인정보 제공이 걱정돼요",
+      "생기부를 봐도 무엇부터 해야 할지 모르겠어요",
+      "예비고1 첫 90일과 첫 시험 준비가 불안해요",
+      "담임·진로 상담 전에 무엇을 물어봐야 할지 모르겠어요",
+      "아이 기록을 맡겨도 되는지 개인정보가 걱정돼요",
       "특목·자사 원서·면접·자소서 준비가 불안해요",
+      "그 밖에 다른 고민이 있어요",
     ],
+  }),
+  ...textareaQuestion({
+    title: "그 밖에 고민이 있다면 편하게 적어주세요",
+    placeholder: "예: 위 선택지와 딱 맞지는 않지만, 아이와 진로 이야기를 할 때마다 막히는 부분이 있어요.",
   }),
   ...dropdownQuestion({
     title: "희망 인터뷰 방식",
@@ -232,8 +238,9 @@ const blocks = [
     isRequired: true,
   }),
   ...textareaQuestion({
-    title: "현재 고민을 한 문장으로 적어주세요",
-    placeholder: "예: 예비고1인데 첫 학기 준비 방향이 막막합니다.",
+    title: "지금 가장 마음에 걸리는 장면을 한 문장으로 적어주세요",
+    placeholder: "예: 중3인데 생기부를 봐도 무엇부터 준비해야 할지 막막합니다.",
+    isRequired: true,
   }),
   divider(),
   ...multipleChoiceQuestion({

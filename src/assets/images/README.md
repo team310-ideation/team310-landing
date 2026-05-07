@@ -21,9 +21,9 @@ src/assets/images/team/originals/semin-portrait-01-original.jpg
 Suggested filenames:
 
 ```text
-src/assets/images/mentors/mentor-jaehong.jpg
-src/assets/images/mentors/mentor-sehwan.jpg
-src/assets/images/mentors/mentor-soonyup.jpg
+src/assets/images/mentors/mentor-sehwan.jpg  # 고세환 멘토
+src/assets/images/mentors/mentor-jaehong.jpg # 조재홍 멘토
+src/assets/images/mentors/mentor-soonyup.jpg # 홍순엽 멘토
 ```
 
 ## Size Guide

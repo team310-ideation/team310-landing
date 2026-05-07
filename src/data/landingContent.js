@@ -7,7 +7,6 @@ import {
   CircleDollarSign,
   ClipboardCheck,
   FileCheck2,
-  Gift,
   HeartHandshake,
   LockKeyhole,
   MessageCircleQuestion,
@@ -81,14 +80,14 @@ export const heroTopics = [
 export const heroTrustItems = [
   { label: "중3·예비고1 고민 중심", icon: UsersRound },
   { label: "자료 업로드 선택", icon: ShieldCheck },
-  { label: "상담 판매가 아닌 인터뷰", icon: MessageCircleQuestion },
+  { label: "무료 상담 인터뷰", icon: CircleDollarSign },
   { label: "AI·SW마에스트로 17기", icon: BadgeCheck },
 ];
 
 export const quickFacts = [
   { value: "중3", label: "예비고1 전환기 학부모 고민 중심" },
-  { value: "50분", label: "전화·Zoom·대면 선택" },
-  { value: "100+", label: "학부모·학생 문제 인터뷰 기반" },
+  { value: "무료", label: "전화·Zoom·대면 50분 상담" },
+  { value: "100명", label: "학부모 목소리를 듣는 것이 목표" },
   { value: "선택", label: "녹음·자료 공유 모두 동의 후 진행" },
 ];
 
@@ -113,7 +112,7 @@ export const socialMissionItems = [
 export const asmProofItems = [
   "AI·SW마에스트로 17기 선발팀",
   "지원서·코딩 테스트·심층면접 기반 선발",
-  "학부모·학생 100+ 인터뷰로 문제 검증 중",
+  "100명의 학부모 목소리를 듣는 것을 목표로 검증 중",
 ];
 
 export const asmBrandLogo = {
@@ -212,6 +211,21 @@ export const painPoints = [
       "원서·면접·자소서 준비에서 놓치고 싶지 않은 기준",
     ],
   },
+  {
+    id: "other",
+    icon: HeartHandshake,
+    tab: "그 밖에 고민",
+    title: "딱 맞는 항목이 없어도 괜찮아요",
+    quote:
+      "위에 있는 고민은 아닌 것 같은데, 아이 문제로 계속 마음에 걸리는 게 있어요.",
+    summary:
+      "생기부, 예비고1, 담임 상담, 특목·자사 준비로 딱 나뉘지 않는 고민도 편하게 들려주세요.",
+    wants: [
+      "요즘 가장 자주 떠오르는 걱정",
+      "누구에게 물어봐야 할지 애매했던 질문",
+      "아이와 이야기할 때 조심스럽거나 막히는 지점",
+    ],
+  },
 ];
 
 export const interviewSteps = [
@@ -236,7 +250,7 @@ export const safetyNotes = [
   { label: "자료 업로드 선택", icon: FileCheck2 },
   { label: "녹음은 동의 시에만", icon: Mic },
   { label: "대면·전화·Zoom 선택", icon: Video },
-  { label: "문화상품권 제공", icon: Gift },
+  { label: "무료 상담", icon: CircleDollarSign },
 ];
 
 export const teamMembers = [
@@ -252,9 +266,9 @@ export const teamMembers = [
     photo: sejongProfile,
     photoAlt: "꽃이 핀 야외 배경 앞에 선 박세종",
     details: [
-      "전) 상상코칭 입시컨설턴트",
-      "박문호의자연과학세상 이사",
-      "월드유스랠리 12개국 국제캠프 PM",
+      "전) 상상코칭 헤드 입시컨설턴트",
+      "전) 국제캠프(12개국) 총괄 PM",
+      "현) 박문호의 자연과학세상 이사",
     ],
   },
   {
@@ -315,8 +329,8 @@ export const trustItems = [
     icon: BadgeCheck,
   },
   {
-    title: "100+ 인터뷰 기반 문제 검증",
-    text: "2026년 3월부터 학부모·학생 인터뷰를 진행하며 정보가 아니라 판단 기준이 부족한 순간을 확인하고 있습니다.",
+    title: "100명의 학부모 목소리를 듣는 목표",
+    text: "2026년 3월부터 학부모·학생 인터뷰를 진행하며, 100명의 학부모 목소리를 모아 판단 기준이 부족한 순간을 확인하고 있습니다.",
     icon: Brain,
   },
   {
@@ -395,7 +409,6 @@ export const offlineLocation = {
   address: "서울특별시 마포구 마포대로 89 포스트타워 7층, 12층",
   postalCode: "04156",
   transit: "공덕역 1번 출구 앞, 도보 약 300m",
-  note: "오프라인 인터뷰는 신청 후 일정과 장소를 확정한 경우에만 진행합니다.",
   kakaoMapUrl:
     "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%A7%88%ED%8F%AC%EB%8C%80%EB%A1%9C%2089%20%ED%8F%AC%EC%8A%A4%ED%8A%B8%ED%83%80%EC%9B%8C",
   kakaoRouteUrl:
