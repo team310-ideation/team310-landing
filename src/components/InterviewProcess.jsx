@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { interviewSteps, safetyNotes } from "../data/landingContent";
+import { interviewSteps } from "../data/landingContent";
 import ApplyLink from "./ApplyLink";
 import Reveal from "./Reveal";
 
@@ -21,8 +21,9 @@ export default function InterviewProcess() {
             const Icon = step.icon;
             return (
               <Reveal className="process-step" key={step.title} delay={index * 0.04}>
-                <span className="step-number">0{index + 1}</span>
-                <Icon size={28} aria-hidden="true" />
+                <div className="step-icon">
+                  <Icon size={32} aria-hidden="true" />
+                </div>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </Reveal>
@@ -30,19 +31,7 @@ export default function InterviewProcess() {
           })}
         </div>
 
-        <Reveal className="assurance-row" delay={0.08}>
-          {safetyNotes.map((note) => {
-            const Icon = note.icon;
-            return (
-              <div className="assurance-item" key={note.label}>
-                <Icon size={22} aria-hidden="true" />
-                <span>{note.label}</span>
-              </div>
-            );
-          })}
-        </Reveal>
-
-        <Reveal className="inline-cta" delay={0.12}>
+        <Reveal className="inline-cta" delay={0.08}>
           <div>
             <strong>불편한 질문은 답하지 않아도 됩니다.</strong>
             <span>자료 공유와 녹음은 동의한 경우에만 진행하고, 내용은 기획 검증에만 사용합니다.</span>

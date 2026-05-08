@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight, CircleDollarSign, ShieldCheck, TimerReset } from "lucide-react";
 import { useEffect, useState } from "react";
-import { heroTopics, heroTrustItems, quickFacts } from "../data/landingContent";
+import { heroTopics, heroTrustItems } from "../data/landingContent";
 import ApplyLink from "./ApplyLink";
 
 export default function Hero() {
@@ -103,21 +103,6 @@ export default function Hero() {
             );
           })}
         </motion.ul>
-      </div>
-
-      <div className="container hero-facts" aria-label="인터뷰 핵심 정보">
-        {quickFacts.map((fact, index) => (
-          <motion.div
-            className="fact-item"
-            key={fact.label}
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.22, delay: 0.18 + index * 0.04 }}
-          >
-            <strong>{fact.value}</strong>
-            <span>{fact.label}</span>
-          </motion.div>
-        ))}
       </div>
 
       <div className="mobile-assurance" aria-label="인터뷰 안심 정보">

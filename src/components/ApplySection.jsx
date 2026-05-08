@@ -129,7 +129,6 @@ function TallyApplyCard() {
       </a>
       <div className="tally-link-meta">
         <span>학부모님 혼자 가능</span>
-        <span>자료 업로드 선택</span>
         <span>무료 상담</span>
       </div>
     </div>
