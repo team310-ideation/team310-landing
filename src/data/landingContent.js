@@ -353,15 +353,15 @@ export const mentorProfiles = [
     name: "고세환",
     status: "담당 멘토",
     role: "기술·서비스·전략 자문",
-    context: "KIST AX, DX, IT 인프라 및 정보보안 체계를 총괄",
+    context: "KIST DX, IT 인프라 및 정보보안 체계를 총괄",
     photo: sehwanMentor,
     photoAlt: "정장을 입고 서 있는 고세환 멘토",
     photoPosition: "70% center",
     summary:
       "문제정의, 개인정보·보안, 정부지원사업 전략까지 서비스가 실제 운영될 때 필요한 기준을 함께 점검합니다.",
-    highlights: ["KIST DX·AX", "정보보안·개인정보", "창업 4회 경험"],
+    highlights: ["KIST DX", "정보보안·개인정보", "창업 4회 경험"],
     career: [
-      "한국과학기술연구원(KIST) AX, DX, IT 인프라 및 정보보안 체계를 총괄 (2013~)",
+      "한국과학기술연구원(KIST) DX, IT 인프라 및 정보보안 체계를 총괄 (2013~)",
       "KT 보안컨설팅·네트워크 보안관제 (2010~2013)",
       "메일북 그룹웨어 개발 (2005~2006)",
       "빅풀 보드게임 개발 (2004~2005)",
