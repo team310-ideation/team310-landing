@@ -33,7 +33,7 @@ import snuLogo from "../assets/images/schools/snu-logo.png";
 import uosLogo from "../assets/images/schools/uos-logo.png";
 
 export const contactEmail =
-  import.meta.env.VITE_CONTACT_EMAIL || "lifedesigner88@gmail.com";
+  import.meta.env.VITE_CONTACT_EMAIL || "adminteam310@gmail.com";
 
 const tallyFormReference = import.meta.env.VITE_TALLY_FORM_URL || "";
 
@@ -356,6 +356,7 @@ export const mentorProfiles = [
     context: "KIST AX, DX, IT 인프라 및 정보보안 체계를 총괄",
     photo: sehwanMentor,
     photoAlt: "정장을 입고 서 있는 고세환 멘토",
+    photoPosition: "70% center",
     summary:
       "문제정의, 개인정보·보안, 정부지원사업 전략까지 서비스가 실제 운영될 때 필요한 기준을 함께 점검합니다.",
     highlights: ["KIST DX·AX", "정보보안·개인정보", "창업 4회 경험"],
@@ -380,12 +381,12 @@ export const mentorProfiles = [
     context: "삼성전자 AI플랫폼센터",
     photo: jaehongMentor,
     photoAlt: "민트색 배경 앞에서 웃고 있는 조재홍 멘토",
+    photoPosition: "25% center",
     summary:
       "대기업 AI·IoT 플랫폼과 에듀테크 스타트업 운영 경험을 바탕으로, 아이디어가 실제 사용자에게 닿는 과정을 함께 점검합니다.",
     highlights: ["삼성전자 AI플랫폼센터", "SmartThings", "에듀테크 운영"],
     career: [
-      "삼성전자 AI플랫폼센터 (2024.11~현재) - AI 기반 업무 혁신(AX) 전략 수립 및 기술 리딩",
-      "삼성전자 AI플랫폼센터 (2024.11~현재) - IoT 플랫폼 전략 기획 및 SmartThings 상품화 개발 관리",
+      "삼성전자 AI플랫폼센터 (2024.11~현재) - AX 전략 수립·기술 리딩 및 IoT 플랫폼·SmartThings 상품화 개발 관리",
       "필로토 (2022.6~2024.5) - 타키 서비스 개발 총괄 및 운영, 사용자 데이터 수집·분석",
       "삼성전자 삼성리서치 (2015.3~2022.5) - IoT 오픈소스 개발 Tech Leader, SmartThings 상품화",
       "삼성전자 무선사업부 (2006.12~2015.2) - 갤럭시 Launcher·Widget·Message, Gear VR Gallery·Video App 개발",

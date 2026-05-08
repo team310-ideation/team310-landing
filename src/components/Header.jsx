@@ -1,5 +1,4 @@
-import { ArrowRight, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import ApplyLink from "./ApplyLink";
 
 const navItems = [
@@ -9,17 +8,15 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Team 310 홈">
         <span>TEAM 310</span>
       </a>
 
-      <nav className={`site-nav ${open ? "is-open" : ""}`} aria-label="주요 섹션">
+      <nav className="site-nav" aria-label="주요 섹션">
         {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+          <a key={item.href} href={item.href}>
             {item.label}
           </a>
         ))}
@@ -29,16 +26,6 @@ export default function Header() {
         신청하기
         <ArrowRight size={18} aria-hidden="true" />
       </ApplyLink>
-
-      <button
-        className="menu-button"
-        type="button"
-        aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
-        aria-expanded={open}
-        onClick={() => setOpen((value) => !value)}
-      >
-        {open ? <X size={22} /> : <Menu size={22} />}
-      </button>
     </header>
   );
 }

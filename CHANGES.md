@@ -40,3 +40,9 @@
 
 **브랜드 표기**
 - `<span className="brand-mark">310</span>` 제거, "TEAM 310"만 표시
+
+**모바일 nav 개선 (`src/App.css`)**
+- 햄버거 메뉴 제거, 3개 항목 항상 표시
+- 980px 이하: nav 항상 노출, font-size 14px / padding 축소
+- 360px 이하: font-size 12px로 추가 축소
+- 모바일 헤더 `justify-content: flex-start`로 변경 — nav가 오른쪽으로 밀리던 문제 수정

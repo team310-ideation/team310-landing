@@ -134,28 +134,17 @@ img {
   color: var(--primary-navy);
 }
 
-.header-cta,
-.menu-button {
+.header-cta {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  font-weight: 800;
-}
-
-.header-cta {
   gap: 7px;
   padding: 0 16px;
+  border-radius: 8px;
   background: var(--cta-orange);
   color: var(--white);
-}
-
-.menu-button {
-  display: none;
-  width: 44px;
-  background: var(--surface);
-  color: var(--deep-navy);
+  font-weight: 800;
 }
 
 .hero-section {
@@ -910,10 +899,11 @@ img {
   display: grid;
   grid-template-columns: minmax(300px, 0.74fr) 1fr;
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .team-photo-panel {
+  display: flex;
   overflow: hidden;
   border-radius: 8px;
   background: var(--surface);
@@ -921,8 +911,8 @@ img {
 
 .team-photo-panel img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -1734,28 +1724,22 @@ img {
     border-bottom: 1px solid var(--border);
     box-shadow: 0 1px 0 var(--border);
     backdrop-filter: none;
+    justify-content: flex-start;
+    gap: 8px;
   }
 
-  .site-nav,
   .header-cta {
     display: none;
   }
 
-  .menu-button {
-    display: inline-flex;
+  .site-nav {
+    display: flex;
+    gap: 2px;
+    font-size: 14px;
   }
 
-  .site-nav.is-open {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    left: 0;
-    display: grid;
-    padding: 10px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--warm-white);
-    box-shadow: var(--shadow);
+  .site-nav a {
+    padding: 10px 8px;
   }
 
   .hero-section {
@@ -1813,6 +1797,16 @@ img {
     justify-content: flex-start;
   }
 
+  .asm-proof-list {
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .asm-proof-band {
+    padding-bottom: 26px;
+  }
+
   .mentor-profile-card {
     grid-template-columns: minmax(220px, 0.42fr) 1fr;
   }
@@ -1841,8 +1835,9 @@ img {
   }
 
   .site-header {
-    top: 10px;
-    width: min(calc(100% - 20px), 1160px);
+    top: auto;
+    justify-content: space-between;
+    padding: 14px 16px;
   }
 
   .brand span:last-child {
@@ -1881,6 +1876,17 @@ img {
 
   .hero-trust-list {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+    margin: 24px 0 0;
+  }
+
+  .hero-trust-list li {
+    justify-content: center;
+    font-size: 12.5px;
+    gap: 5px;
+    padding: 8px 4px;
   }
 
   .hero-facts {
@@ -2008,6 +2014,15 @@ img {
 @media (max-width: 360px) {
   :root {
     --section-padding: 44px;
+  }
+
+  .site-nav {
+    font-size: 12px;
+    gap: 0;
+  }
+
+  .site-nav a {
+    padding: 8px 5px;
   }
 
   .container,

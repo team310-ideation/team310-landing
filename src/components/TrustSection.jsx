@@ -34,7 +34,12 @@ export default function TrustSection() {
               delay={0.1 + index * 0.04}
             >
               <div className="mentor-photo-frame">
-                <img src={mentor.photo} alt={mentor.photoAlt} loading="lazy" />
+                <img
+                  src={mentor.photo}
+                  alt={mentor.photoAlt}
+                  loading="lazy"
+                  style={mentor.photoPosition ? { objectPosition: mentor.photoPosition } : undefined}
+                />
               </div>
               <div className="mentor-card-body">
                 <div className="mentor-card-header">
